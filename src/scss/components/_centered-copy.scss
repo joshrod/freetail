@@ -1,0 +1,43 @@
+.centered-copy {
+    text-align: center;
+    @include breakpoint(md) {
+        @include complete-center;
+    }
+
+    .hero-heading, .main-heading {
+        margin-bottom: 2rem;
+        @include breakpoint(md) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    .hero-heading {
+        @include breakpoint(xl) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    .sub-heading {
+        margin-bottom: 1rem;
+        @include breakpoint(md) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    p {
+        margin-bottom: 2rem;
+        @include breakpoint(md) {
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+.brews .centered-copy {
+    @include complete-center;
+}
+
+.hero .centered-copy p {
+    @include breakpoint(xl) {
+        margin-bottom: 4rem;
+    }
+}

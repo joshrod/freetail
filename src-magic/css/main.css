@@ -1,0 +1,113 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Crimson Text", serif;
+}
+
+p {
+  margin: 0;
+  font-family: "Crimson Text", serif;
+}
+
+.beer {
+  width: 100%;
+  height: 100%;
+}
+
+#beer1,
+#beer2 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+#beer1 {
+  z-index: 5;
+}
+
+#beer2 {
+  z-index: 4;
+}
+
+#section1,
+#section2 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.img-container {
+  width: 100%;
+  max-width: 20rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  z-index: 3;
+}
+
+.wht-left {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background-color: white;
+  z-index: 1;
+}
+
+.color-rt {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.wht-left .text {
+  max-width: 450px;
+  position: relative;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+
+.wht-left .text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 80px;
+}
+
+.wht-left .text p {
+  font-size: 1.4rem;
+}
+
+#section1 .color-rt {
+  background-color: #c28f1d;
+}
+
+#section2 .color-rt {
+  background-color: #7a9cb0;
+}

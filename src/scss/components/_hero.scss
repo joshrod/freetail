@@ -1,0 +1,20 @@
+.hero {
+    @include background;
+    width: 100%;
+    height: 100%;
+    padding: 6rem 2rem;
+
+    .centered-copy {
+        @include complete-center;
+        @include breakpoint(md) {
+            padding-left: 8%;
+            padding-right: 8%;
+        }
+
+        p {
+            max-width: 120rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
