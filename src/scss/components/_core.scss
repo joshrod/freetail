@@ -1,0 +1,112 @@
+.core {
+    width: 100%;
+    height: 200%;
+    min-height: 100%;
+    position: relative;
+
+
+    .beers {
+        width: 100%;
+        height: 50%;
+        position: absolute;
+
+        .core-container {
+            width: 100%;
+            max-width: 30rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 1;
+            z-index: 3;
+        }
+    }
+
+    .beer-details {
+        border: 2px solid white;
+        text-transform: uppercase;
+        color: white;
+        font-size: 1.8rem;
+        font-weight: 500;
+        display: inline-block;
+        padding: 0.5rem 2rem;
+        margin-top: 3rem;
+
+        .right-arrow {
+            @include chevron(right);
+        }
+    }
+
+    #beer1 {
+        z-index: 5;
+    }
+      
+    #beer2 {
+        z-index: 4;
+    }
+
+    .beer-info {
+        width: 100%;
+        height: 50%;
+        position: relative;
+
+        .bg-rt {
+            @include background;
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            z-index: 1;
+
+            .text {
+                position: absolute;
+                top: 50%;
+                right: 18%;
+                transform: translateY(-50%);
+
+                h1 {
+                    font-family: $oswald;
+                    font-size: 7.2rem;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+
+        .color-lt {
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            z-index: 1;
+        }
+    }
+
+    #info1 {
+
+        .color-lt {
+            background-color: $helles-orange;
+        }
+
+        .bg-rt {
+            background-image: url('../../../img/helles-bg.jpg');
+
+            h1 {
+                color: $secondary-orange;
+            }
+        }
+    }
+
+    #info2 {
+
+        .color-lt {
+            background-color: $ryewit-blue;
+        }
+
+        .bg-rt {
+            
+        }
+    }
+}
+  

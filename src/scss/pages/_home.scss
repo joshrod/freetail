@@ -3,10 +3,12 @@
     .brew-room, .tours-events {
         @extend %clearfix;
         width: 100%;
+        position: relative;
     }
 
     .brewpub, .taproom, .brews, .merch, .tours, .events {
         @include background;
+        position: relative;
     }
 
     .brewpub, .taproom, .tours, .events {

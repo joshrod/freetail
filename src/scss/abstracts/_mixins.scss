@@ -43,7 +43,67 @@
        }
     }
   }
+/* ARROWS */
+@mixin arrow($direction: down, $size: 5px, $color: #555) {
+   width: 0;
+   height: 0;
+   @if ($direction == left) {
+      border-top: $size solid transparent;
+      border-bottom: $size solid transparent; 
+      border-right: $size solid $color;
+   }
+   @else if ($direction == right) {
+      border-top: $size solid transparent;
+      border-bottom: $size solid transparent; 
+      border-left: $size solid $color;
+   }
+   @else if ($direction == down) {
+      border-left: $size solid transparent;
+      border-right: $size solid transparent;
+      border-top: $size solid $color;
+   }
+   @else {
+      border-left: $size solid transparent;
+      border-right: $size solid transparent;
+      border-bottom: $size solid $color;
+   }
+ }
 
+ /* CHEVRONS */
+@mixin chevron($direction: top, $size: 1.1rem, $color: white) {
+   &::before {
+      border-style: solid;
+      border-width: 0.15rem 0.15rem 0 0;
+      content: '';
+      display: inline-block;
+      height: $size;
+      position: relative;
+      vertical-align: top;
+      width: $size;
+      color: $color;
+      @if ($direction == top) {
+         top: 0.55rem;
+         left: 0.15rem;
+         transform: rotate(-45deg);
+      }
+      @else if ($direction == right) {
+         top: 0.55rem;
+         left: 0;
+         transform: rotate(45deg);
+      }
+      @else if ($direction == down) {
+         top: 0.5rem;
+         left: 0.15rem;
+         transform: rotate(135deg);
+      }
+      @else {
+         top: 0.55rem;
+         left: 0.25rem;
+         transform: rotate(-135deg);
+      }
+   }
+}
+ 
   /* CLEARFIX MIXIN */
 %clearfix {
     *zoom: 1;

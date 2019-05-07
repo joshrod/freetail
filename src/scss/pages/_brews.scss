@@ -1,0 +1,7 @@
+.brews-body {
+
+    .hero {
+        @include background;
+        background-image: url('../../../img/brews-hero.jpg');
+    }
+}
