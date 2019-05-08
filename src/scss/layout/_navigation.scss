@@ -7,7 +7,7 @@
     z-index: 9;
     @include breakpoint(md) {
         height: 8rem;
-        // position: fixed;
+        position: fixed;
     }
 
     .social-media {
