@@ -343,17 +343,36 @@ ul {
   }
 }
 
+.description-outline {
+  font-family: "Oswald", sans-serif;
+  font-size: 10rem;
+  -webkit-text-stroke: 1px white;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
 .core {
   width: 100%;
   height: 200%;
   min-height: 100%;
   position: relative;
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .core {
+    display: block;
+  }
 }
 
 .core .beers {
   width: 100%;
-  height: 50%;
+  max-width: 30rem;
   position: absolute;
+  top: 25%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .core .beers .core-container {
@@ -361,9 +380,8 @@ ul {
   max-width: 30rem;
   position: absolute;
   top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   opacity: 1;
   z-index: 3;
 }
@@ -444,8 +462,31 @@ ul {
   z-index: 1;
 }
 
+.core .beer-info .color-lt .beer-description {
+  position: absolute;
+  top: 50%;
+  left: 18%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.core .beer-info .color-lt .beer-description h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.4rem;
+  margin-top: 2rem;
+  letter-spacing: 1px;
+}
+
 .core #info1 .color-lt {
   background-color: #dda124;
+}
+
+.core #info1 .color-lt h1 {
+  color: #dda124;
+}
+
+.core #info1 .color-lt h3 {
+  color: #ae7e1a;
 }
 
 .core #info1 .bg-rt {
@@ -458,6 +499,14 @@ ul {
 
 .core #info2 .color-lt {
   background-color: #7a9cb0;
+}
+
+.core #info2 .color-lt h1 {
+  color: #7a9cb0;
+}
+
+.core #info2 .color-lt h3 {
+  color: #456f88;
 }
 
 .core #info2 .bg-rt {

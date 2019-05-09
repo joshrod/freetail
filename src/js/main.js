@@ -4,11 +4,14 @@ const trigger = document.querySelector("#trigger");
 const beers = document.querySelectorAll(".beers");
 const logoPlate = document.querySelector(".logo-plate");
 const navbar = document.querySelector(".main-nav");
+const core = document.querySelector('.core');
 
 let controller = new ScrollMagic.Controller();
 
 window.onload = () => {
 	centerOutlines();
+
+	stopFixedBeer();
 
 	let tween = new TimelineMax();
 	tween.add(TweenMax.to("#beer1", 1, { opacity: 0 }), "first");
@@ -25,21 +28,21 @@ window.onload = () => {
 	window.onscroll = () => {
 		shrinkNav();
 
+		stopFixedBeer();
+
 		triggerBound = trigger.getBoundingClientRect().top;
 
-		if (triggerBound <= 0) {
+		if (triggerBound <= 0 && core.getBoundingClientRect().bottom > window.innerHeight) {
 			for (let i = 0; i < beers.length; i++) {
 				const beer = beers[i];
 				beer.style.position = "fixed";
-				beer.style.top = 0;
-				beer.style.left = 0;
-				beer.style.height = 100 + "%";
+				beer.style.top = 50 + '%';
 			}
-		} else {
+		} else if (triggerBound > 0) {
 			for (let i = 0; i < beers.length; i++) {
 				const beer = beers[i];
 				beer.style.position = "absolute";
-				beer.style.height = 50 + "%";
+				beer.style.top = 25 + "%";
 			}
 		}
 	};
@@ -63,5 +66,17 @@ function shrinkNav() {
 	} else {
 		logoPlate.classList.remove("shrink-plate");
 		navbar.style.backgroundColor = "white";
+	}
+}
+
+function stopFixedBeer() {
+	coreBottom = core.getBoundingClientRect().bottom;
+
+	if (coreBottom <= window.innerHeight) {
+		for (let i = 0; i < beers.length; i++) {
+			const beer = beers[i];
+			beer.style.position = 'absolute';
+			beer.style.top = 75 + '%';
+		}
 	}
 }
