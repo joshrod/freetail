@@ -22,10 +22,12 @@
     font-size: 10rem;
     -webkit-text-stroke: 1px white;
     text-transform: uppercase;
-    text-shadow: 
+    @include breakpoint(md) {
+        text-shadow: 
         1px 1px 0 #fff,
         -1px -1px 0 #fff,
         1px -1px 0 #fff,
         -1px 1px 0 #fff,
         1px 1px 0 #fff;
+    }
 }

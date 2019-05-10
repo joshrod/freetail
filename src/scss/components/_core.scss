@@ -3,10 +3,6 @@
 	height: 200%;
 	min-height: 100%;
 	position: relative;
-	display: none;
-	@include breakpoint(lg) {
-		display: block;
-	}
 
 	.beers {
 		width: 100%;
@@ -15,19 +11,13 @@
 		top: 25%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-
-		.core-container {
-			width: 100%;
-			max-width: 30rem;
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
-			opacity: 1;
-			z-index: 3;
+		display: none;
+		@include breakpoint(xl) {
+			display: block;
 		}
 	}
 
-	.beer-details {
+	.more-details {
 		border: 2px solid white;
 		text-transform: uppercase;
 		color: white;
@@ -57,47 +47,86 @@
 
 		.bg-rt {
 			@include background;
-			width: 50%;
-			height: 100%;
+			width: 100%;
+			height: 40%;
 			position: absolute;
-			right: 0;
+			top: 0;
 			background-color: white;
 			z-index: 1;
-
-			.text {
-				position: absolute;
-				top: 50%;
-				right: 18%;
-				transform: translateY(-50%);
-
-				h1 {
-					font-family: $oswald;
-					font-size: 7.2rem;
-					font-weight: 700;
-					letter-spacing: 1px;
-				}
+			@include breakpoint(md) {
+				width: 50%;
+				height: 100%;
+				top: auto;
+				right: 0;
 			}
 		}
 
 		.color-lt {
-			width: 50%;
+			width: 100%;
+			height: 60%;
+			position: absolute;
+			bottom: 0;
+			z-index: 1;
+			@include breakpoint(md) {
+				width: 50%;
+				height: 100%;
+				bottom: auto;
+				left: 0;
+			}
+		}
+
+		.beer-description {
+			position: absolute;
+			top: 50%;
+			left: 18%;
+			transform: translateY(-50%);
+			z-index: 3;
+
+			h3 {
+				font-family: $oswald;
+				font-size: 2.4rem;
+				margin-top: 2rem;
+				letter-spacing: 1px;
+			}
+		}
+
+		.beer-details {
+			position: absolute;
+			left: 50%;
+			bottom: 5%;
+			z-index: 3;
+			transform: translate(-50%, 0);
+			@include breakpoint(md) {
+				top: 50%;
+				right: 18%;
+				transform: translate(-50%, -50%);
+			}
+
+			h1 {
+				font-size: 4.8rem;
+				font-family: $oswald;
+				font-weight: 700;
+				letter-spacing: 1px;
+				@include breakpoint(md) {
+					font-size: 7.2rem;
+				}
+			}
+		}
+
+		.mobile-beers {
 			height: 100%;
 			position: absolute;
-			left: 0;
-			z-index: 1;
-
-			.beer-description {
-				position: absolute;
-				top: 50%;
-				left: 18%;
-				transform: translateY(-50%);
-
-				h3 {
-					font-family: $oswald;
-					font-size: 2.4rem;
-					margin-top: 2rem;
-					letter-spacing: 1px;
-				}
+			top: 8%;
+			left: 50%;
+			z-index: 2;
+			transform: translateX(-50%);
+			@include breakpoint(lg) {
+				display: none;
+			}
+			
+			img {
+				width: auto;
+				height: 60%;
 			}
 		}
 	}
@@ -105,22 +134,28 @@
 	#info1 {
 		.color-lt {
 			background-color: $helles-orange;
+		}
 
-			h1 {
+		.description-outline {
+			color: transparent;
+			@include breakpoint(md) {
 				color: $helles-orange;
 			}
-
-			h3 {
-				color: $tertiary-orange;
-			}
 		}
+
+		.alcohol-numbers {
+			color: $secondary-orange;
+		}
+
+		h3 {
+			color: $tertiary-orange;
+		}
+		
 
 		.bg-rt {
 			background-image: url("../../../img/helles-bg.jpg");
 
-			h1 {
-				color: $secondary-orange;
-			}
+			
 		}
 	}
 

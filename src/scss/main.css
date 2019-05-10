@@ -348,7 +348,12 @@ ul {
   font-size: 10rem;
   -webkit-text-stroke: 1px white;
   text-transform: uppercase;
-  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+@media only screen and (min-width: 680px) {
+  .description-outline {
+    text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  }
 }
 
 .core {
@@ -356,13 +361,6 @@ ul {
   height: 200%;
   min-height: 100%;
   position: relative;
-  display: none;
-}
-
-@media only screen and (min-width: 1024px) {
-  .core {
-    display: block;
-  }
 }
 
 .core .beers {
@@ -373,20 +371,16 @@ ul {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  display: none;
 }
 
-.core .beers .core-container {
-  width: 100%;
-  max-width: 30rem;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  opacity: 1;
-  z-index: 3;
+@media only screen and (min-width: 1366px) {
+  .core .beers {
+    display: block;
+  }
 }
 
-.core .beer-details {
+.core .more-details {
   border: 2px solid white;
   text-transform: uppercase;
   color: white;
@@ -397,7 +391,7 @@ ul {
   margin-top: 3rem;
 }
 
-.core .beer-details .right-arrow::before {
+.core .more-details .right-arrow::before {
   border-style: solid;
   border-width: 0.15rem 0.15rem 0 0;
   content: '';
@@ -431,70 +425,132 @@ ul {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  width: 50%;
-  height: 100%;
+  width: 100%;
+  height: 40%;
   position: absolute;
-  right: 0;
+  top: 0;
   background-color: white;
   z-index: 1;
 }
 
-.core .beer-info .bg-rt .text {
-  position: absolute;
-  top: 50%;
-  right: 18%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.core .beer-info .bg-rt .text h1 {
-  font-family: "Oswald", sans-serif;
-  font-size: 7.2rem;
-  font-weight: 700;
-  letter-spacing: 1px;
+@media only screen and (min-width: 680px) {
+  .core .beer-info .bg-rt {
+    width: 50%;
+    height: 100%;
+    top: auto;
+    right: 0;
+  }
 }
 
 .core .beer-info .color-lt {
-  width: 50%;
-  height: 100%;
+  width: 100%;
+  height: 60%;
   position: absolute;
-  left: 0;
+  bottom: 0;
   z-index: 1;
 }
 
-.core .beer-info .color-lt .beer-description {
+@media only screen and (min-width: 680px) {
+  .core .beer-info .color-lt {
+    width: 50%;
+    height: 100%;
+    bottom: auto;
+    left: 0;
+  }
+}
+
+.core .beer-info .beer-description {
   position: absolute;
   top: 50%;
   left: 18%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  z-index: 3;
 }
 
-.core .beer-info .color-lt .beer-description h3 {
+.core .beer-info .beer-description h3 {
   font-family: "Oswald", sans-serif;
   font-size: 2.4rem;
   margin-top: 2rem;
   letter-spacing: 1px;
 }
 
+.core .beer-info .beer-details {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  z-index: 3;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+@media only screen and (min-width: 680px) {
+  .core .beer-info .beer-details {
+    top: 50%;
+    right: 18%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+.core .beer-info .beer-details h1 {
+  font-size: 4.8rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+@media only screen and (min-width: 680px) {
+  .core .beer-info .beer-details h1 {
+    font-size: 7.2rem;
+  }
+}
+
+.core .beer-info .mobile-beers {
+  height: 100%;
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  z-index: 2;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media only screen and (min-width: 1024px) {
+  .core .beer-info .mobile-beers {
+    display: none;
+  }
+}
+
+.core .beer-info .mobile-beers img {
+  width: auto;
+  height: 60%;
+}
+
 .core #info1 .color-lt {
   background-color: #dda124;
 }
 
-.core #info1 .color-lt h1 {
-  color: #dda124;
+.core #info1 .description-outline {
+  color: transparent;
 }
 
-.core #info1 .color-lt h3 {
+@media only screen and (min-width: 680px) {
+  .core #info1 .description-outline {
+    color: #dda124;
+  }
+}
+
+.core #info1 .alcohol-numbers {
+  color: #ffe08e;
+}
+
+.core #info1 h3 {
   color: #ae7e1a;
 }
 
 .core #info1 .bg-rt {
   background-image: url("../../../img/helles-bg.jpg");
-}
-
-.core #info1 .bg-rt h1 {
-  color: #ffe08e;
 }
 
 .core #info2 .color-lt {
