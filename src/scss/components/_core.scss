@@ -17,21 +17,6 @@
 		}
 	}
 
-	.more-details {
-		border: 2px solid white;
-		text-transform: uppercase;
-		color: white;
-		font-size: 1.8rem;
-		font-weight: 500;
-		display: inline-block;
-		padding: 0.5rem 2rem;
-		margin-top: 3rem;
-
-		.right-arrow {
-			@include chevron(right);
-		}
-	}
-
 	#beer1 {
 		z-index: 5;
 	}
@@ -44,6 +29,13 @@
 		width: 100%;
 		height: 50%;
 		position: relative;
+
+		.desktop-break {
+			display: none;
+			@include breakpoint(xl) {
+				display: block;
+			}
+		}
 
 		.bg-rt {
 			@include background;
@@ -77,24 +69,32 @@
 
 		.beer-description {
 			position: absolute;
-			top: 50%;
-			left: 18%;
-			transform: translateY(-50%);
+			width: 100%;
+			top: 4%;
+			left: 50%;
+			// top: 50%;
+			// left: 18%;
+			transform: translate(-50%, 0);
 			z-index: 3;
+			text-align: center;
 
 			h3 {
 				font-family: $oswald;
-				font-size: 2.4rem;
-				margin-top: 2rem;
+				// font-size: 2.4rem;
+				font-size: 1.6rem;
+				// margin-top: 2rem;
+				margin-top: 0.5rem;
 				letter-spacing: 1px;
 			}
 		}
 
 		.beer-details {
+			width: 100%;
 			position: absolute;
 			left: 50%;
-			bottom: 5%;
+			bottom: 4%;
 			z-index: 3;
+			text-align: center;
 			transform: translate(-50%, 0);
 			@include breakpoint(md) {
 				top: 50%;
@@ -102,8 +102,9 @@
 				transform: translate(-50%, -50%);
 			}
 
-			h1 {
-				font-size: 4.8rem;
+			.alcohol-numbers {
+				// font-size: 4.8rem;
+				font-size: 2rem;
 				font-family: $oswald;
 				font-weight: 700;
 				letter-spacing: 1px;
@@ -111,22 +112,40 @@
 					font-size: 7.2rem;
 				}
 			}
+
+			.more-details {
+				border: 2px solid white;
+				text-transform: uppercase;
+				color: white;
+				// font-size: 1.8rem;
+				font-weight: 500;
+				display: inline-block;
+				padding: 0.5rem 1.5rem;
+				font-size: 1.6rem;
+				// padding: 0.5rem 2rem;
+				// margin-top: 3rem;
+				margin-top: 1rem;
+		
+				.right-arrow {
+					@include chevron(right);
+				}
+			}
 		}
 
 		.mobile-beers {
-			height: 100%;
+			height: 60%;
 			position: absolute;
-			top: 8%;
+			top: 50%;
 			left: 50%;
 			z-index: 2;
-			transform: translateX(-50%);
+			transform: translate(-50%, -50%);
 			@include breakpoint(lg) {
 				display: none;
 			}
 
 			img {
 				width: auto;
-				height: 60%;
+				height: 100%;
 			}
 		}
 	}
