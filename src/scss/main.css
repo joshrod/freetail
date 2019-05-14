@@ -345,7 +345,7 @@ ul {
 
 .description-outline {
   font-family: "Oswald", sans-serif;
-  font-size: 10rem;
+  font-size: 3rem;
   -webkit-text-stroke: 1px white;
   text-transform: uppercase;
 }
@@ -557,20 +557,26 @@ ul {
   background-color: #7a9cb0;
 }
 
-.core #info2 .color-lt h1 {
-  color: #7a9cb0;
+.core #info2 .description-outline {
+  color: transparent;
 }
 
-.core #info2 .color-lt h3 {
+@media only screen and (min-width: 680px) {
+  .core #info2 .description-outline {
+    color: #7a9cb0;
+  }
+}
+
+.core #info2 .alcohol-numbers {
+  color: #87b6d1;
+}
+
+.core #info2 h3 {
   color: #456f88;
 }
 
 .core #info2 .bg-rt {
   background-color: #87b6d1;
-}
-
-.core #info2 .bg-rt h1 {
-  color: #bfe8ff;
 }
 
 .main-nav {

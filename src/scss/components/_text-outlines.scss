@@ -1,33 +1,30 @@
 .text-outline {
-    width: 90%;
-    display: block;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    max-width: 130rem;
-    @include breakpoint(md) {
-        width: 80%;
-    }
-    @include breakpoint(lg) {
-        width: 75%;
-    }
-    @include breakpoint(xl) {
-        width: 65%;
-    }
+	width: 90%;
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 2;
+	max-width: 130rem;
+	@include breakpoint(md) {
+		width: 80%;
+	}
+	@include breakpoint(lg) {
+		width: 75%;
+	}
+	@include breakpoint(xl) {
+		width: 65%;
+	}
 }
 
 .description-outline {
-    font-family: $oswald;
-    font-size: 10rem;
-    -webkit-text-stroke: 1px white;
-    text-transform: uppercase;
-    @include breakpoint(md) {
-        text-shadow: 
-        1px 1px 0 #fff,
-        -1px -1px 0 #fff,
-        1px -1px 0 #fff,
-        -1px 1px 0 #fff,
-        1px 1px 0 #fff;
-    }
+	font-family: $oswald;
+	// font-size: 10rem;
+	font-size: 3rem;
+	-webkit-text-stroke: 1px white;
+	text-transform: uppercase;
+	@include breakpoint(md) {
+		text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff,
+			-1px 1px 0 #fff, 1px 1px 0 #fff;
+	}
 }

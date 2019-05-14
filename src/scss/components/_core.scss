@@ -123,7 +123,7 @@
 			@include breakpoint(lg) {
 				display: none;
 			}
-			
+
 			img {
 				width: auto;
 				height: 60%;
@@ -150,34 +150,34 @@
 		h3 {
 			color: $tertiary-orange;
 		}
-		
 
 		.bg-rt {
 			background-image: url("../../../img/helles-bg.jpg");
-
-			
 		}
 	}
 
 	#info2 {
 		.color-lt {
 			background-color: $ryewit-blue;
+		}
 
-			h1 {
+		.description-outline {
+			color: transparent;
+			@include breakpoint(md) {
 				color: $ryewit-blue;
-			}
-
-			h3 {
-				color: $tertiary-blue;
 			}
 		}
 
-		.bg-rt {
-			background-color: #87b6d1;
+		.alcohol-numbers {
+			color: $secondary-blue;
+		}
 
-			h1 {
-				color: #bfe8ff;
-			}
+		h3 {
+			color: $tertiary-blue;
+		}
+
+		.bg-rt {
+			background-color: $secondary-blue;
 		}
 	}
 }
