@@ -19,8 +19,6 @@
 
 .description-outline {
 	font-family: $oswald;
-	// font-size: 10rem;
-	font-size: 3.5rem;
 	-webkit-text-stroke: 1px white;
 	text-transform: uppercase;
 	@include breakpoint(md) {

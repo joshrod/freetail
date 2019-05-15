@@ -42,6 +42,11 @@
           @content;
        }
     }
+    @else if $point == landscape {
+       @media only screen and (max-width: 680px) and (orientation: landscape) {
+          @content;
+       }
+    }
   }
 /* ARROWS */
 @mixin arrow($direction: down, $size: 5px, $color: #555) {
