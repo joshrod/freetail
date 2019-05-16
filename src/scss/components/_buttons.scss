@@ -44,3 +44,15 @@
         }
     }
 }
+
+.details-button {
+    border-width: 2px;
+    border-style: solid;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    
+    .right-arrow {
+        @include chevron(right);
+    }
+}

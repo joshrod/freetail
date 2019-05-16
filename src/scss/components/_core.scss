@@ -15,6 +15,9 @@
 		@include breakpoint(xl) {
 			display: block;
 		}
+		@include breakpoint(xxl) {
+			max-width: 38rem;
+		}
 	}
 
 	#beer1 {
@@ -84,11 +87,20 @@
 				text-align: left;
 				transform: translate(-50%, -50%);
 			}
+			@include breakpoint(xl) {
+				width: auto;
+				top: 50%;
+				left: 8%;
+				transform: translate(0, -50%);
+			}
 
 			.description-outline {
 				font-size: 12vw;
 				@include breakpoint(md) {
 					font-size: 8rem;
+				}
+				@include breakpoint(xl) {
+					font-size: 8vw;
 				}
 			}
 
@@ -102,6 +114,9 @@
 				@include breakpoint(md) {
 					font-size: 2.4rem;
 					margin-top: 1rem;
+				}
+				@include breakpoint(xl) {
+					font-size: 1.8vw;
 				}
 			}
 		}
@@ -123,6 +138,13 @@
 				transform: translate(-50%, -50%);
 				text-align: left;
 			}
+			@include breakpoint(xl) {
+				width: auto;
+				top: 50%;
+				right: 8%;
+				left: auto;
+				transform: translate(0 , -50%);
+			}
 
 			.alcohol-numbers {
 				// font-size: 4.8rem;
@@ -133,26 +155,24 @@
 				@include breakpoint(md) {
 					font-size: 5rem;
 				}
+				@include breakpoint(xl) {
+					font-size: 4.8vw;
+				}
 			}
 
-			.more-details {
-				border: 2px solid white;
-				text-transform: uppercase;
+			.details-button {
+				border-color: white;
 				color: white;
-				// font-size: 1.8rem;
-				font-weight: 500;
-				display: inline-block;
 				padding: 0.5rem 1.5rem;
 				font-size: 1.6rem;
-				// padding: 0.5rem 2rem;
-				// margin-top: 3rem;
 				margin-top: 1.2rem;
 				@include breakpoint(md) {
 					margin-top: 2rem;
 				}
-		
-				.right-arrow {
-					@include chevron(right);
+				@include breakpoint(xl) {
+					margin-top: 3rem;
+					padding: 0.5rem 2rem;
+					font-size: 1.8rem;
 				}
 			}
 		}
@@ -224,7 +244,7 @@
 		}
 
 		.alcohol-numbers {
-			color: $secondary-blue;
+			color: #b6e4ff;
 		}
 
 		h3 {

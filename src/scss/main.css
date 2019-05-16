@@ -83,7 +83,7 @@ p {
   }
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1240px) {
   p {
     font-size: 2rem;
   }
@@ -108,7 +108,7 @@ ul {
   }
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1240px) {
   .grunge-button--black, .grunge-button--red, .grunge-button--gray, .grunge-button--lightgray {
     width: 17rem;
   }
@@ -132,7 +132,7 @@ ul {
   }
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1240px) {
   .grunge-button--black a, .grunge-button--red a, .grunge-button--gray a, .grunge-button--lightgray a {
     height: 4rem;
     font-size: 2.2rem;
@@ -159,7 +159,31 @@ ul {
   }
 }
 
-.hero-heading, .main-heading, .sub-heading {
+.details-button {
+  border-width: 2px;
+  border-style: solid;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.details-button .right-arrow::before {
+  border-style: solid;
+  border-width: 0.15rem 0.15rem 0 0;
+  content: '';
+  display: inline-block;
+  height: 1.1rem;
+  position: relative;
+  vertical-align: top;
+  width: 1.1rem;
+  color: white;
+  top: 0.55rem;
+  left: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.hero-heading, .main-heading, .sub-heading, .gray-heading {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   color: white;
@@ -176,7 +200,7 @@ ul {
   }
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1240px) {
   .hero-heading {
     font-size: 9rem;
   }
@@ -198,7 +222,7 @@ ul {
   }
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1240px) {
   .main-heading {
     font-size: 8rem;
   }
@@ -214,10 +238,18 @@ ul {
   }
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1240px) {
   .sub-heading {
     font-size: 6rem;
   }
+}
+
+.gray-heading {
+  margin-top: 2.5rem;
+  color: #a7a8aa;
+  font-weight: 600;
+  font-size: 11.5vw;
+  text-align: center;
 }
 
 .centered-copy {
@@ -244,7 +276,7 @@ ul {
   }
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1240px) {
   .centered-copy .hero-heading {
     margin-bottom: 4rem;
   }
@@ -278,7 +310,7 @@ ul {
           transform: translate(-50%, -50%);
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1240px) {
   .hero .centered-copy p {
     margin-bottom: 4rem;
   }
@@ -338,7 +370,7 @@ ul {
   }
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1240px) {
   .text-outline {
     width: 65%;
   }
@@ -374,9 +406,15 @@ ul {
   display: none;
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1240px) {
   .core .beers {
     display: block;
+  }
+}
+
+@media only screen and (min-width: 1720px) {
+  .core .beers {
+    max-width: 38rem;
   }
 }
 
@@ -464,6 +502,16 @@ ul {
   }
 }
 
+@media only screen and (min-width: 1240px) {
+  .core .beer-info .beer-description {
+    width: auto;
+    top: 50%;
+    left: 8%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+}
+
 .core .beer-info .beer-description .description-outline {
   font-size: 12vw;
 }
@@ -471,6 +519,12 @@ ul {
 @media only screen and (min-width: 680px) {
   .core .beer-info .beer-description .description-outline {
     font-size: 8rem;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  .core .beer-info .beer-description .description-outline {
+    font-size: 8vw;
   }
 }
 
@@ -485,6 +539,12 @@ ul {
   .core .beer-info .beer-description h3 {
     font-size: 2.4rem;
     margin-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  .core .beer-info .beer-description h3 {
+    font-size: 1.8vw;
   }
 }
 
@@ -511,6 +571,17 @@ ul {
   }
 }
 
+@media only screen and (min-width: 1240px) {
+  .core .beer-info .beer-details {
+    width: auto;
+    top: 50%;
+    right: 8%;
+    left: auto;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+}
+
 .core .beer-info .beer-details .alcohol-numbers {
   font-size: 8.5vw;
   font-family: "Oswald", sans-serif;
@@ -524,37 +595,32 @@ ul {
   }
 }
 
-.core .beer-info .beer-details .more-details {
-  border: 2px solid white;
-  text-transform: uppercase;
+@media only screen and (min-width: 1240px) {
+  .core .beer-info .beer-details .alcohol-numbers {
+    font-size: 4.8vw;
+  }
+}
+
+.core .beer-info .beer-details .details-button {
+  border-color: white;
   color: white;
-  font-weight: 500;
-  display: inline-block;
   padding: 0.5rem 1.5rem;
   font-size: 1.6rem;
   margin-top: 1.2rem;
 }
 
 @media only screen and (min-width: 680px) {
-  .core .beer-info .beer-details .more-details {
+  .core .beer-info .beer-details .details-button {
     margin-top: 2rem;
   }
 }
 
-.core .beer-info .beer-details .more-details .right-arrow::before {
-  border-style: solid;
-  border-width: 0.15rem 0.15rem 0 0;
-  content: '';
-  display: inline-block;
-  height: 1.1rem;
-  position: relative;
-  vertical-align: top;
-  width: 1.1rem;
-  color: white;
-  top: 0.55rem;
-  left: 0;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+@media only screen and (min-width: 1240px) {
+  .core .beer-info .beer-details .details-button {
+    margin-top: 3rem;
+    padding: 0.5rem 2rem;
+    font-size: 1.8rem;
+  }
 }
 
 .core .beer-info .mobile-beers {
@@ -578,7 +644,7 @@ ul {
   }
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1240px) {
   .core .beer-info .mobile-beers {
     display: none;
   }
@@ -637,7 +703,7 @@ ul {
 }
 
 .core #info2 .alcohol-numbers {
-  color: #87b6d1;
+  color: #b6e4ff;
 }
 
 .core #info2 h3 {
@@ -646,6 +712,40 @@ ul {
 
 .core #info2 .bg-rt {
   background-color: #87b6d1;
+}
+
+.beer-carousel {
+  width: 100%;
+}
+
+.beer-carousel .seasonal-beer {
+  text-align: center;
+}
+
+.beer-carousel .seasonal-beer .beer-can {
+  height: 75vh;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.beer-carousel .seasonal-beer .beer-can img {
+  height: 100%;
+  width: auto;
+}
+
+.beer-carousel .seasonal-beer .seasonal-details {
+  margin-top: -16vh;
+}
+
+.beer-carousel .seasonal-beer .seasonal-details h3, .beer-carousel .seasonal-beer .seasonal-details p {
+  font-family: "Oswald", sans-serif;
+  color: black;
+  font-weight: 500;
+}
+
+.beer-carousel .seasonal-beer .seasonal-details h3 {
+  text-transform: uppercase;
 }
 
 .main-nav {
@@ -749,7 +849,7 @@ footer .footer-container {
   position: relative;
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1240px) {
   footer .footer-container {
     max-width: 122rem;
   }
