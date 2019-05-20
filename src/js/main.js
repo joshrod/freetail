@@ -4,7 +4,7 @@ const trigger = document.querySelector("#trigger");
 const beers = document.querySelectorAll(".beers");
 const logoPlate = document.querySelector(".logo-plate");
 const navbar = document.querySelector(".main-nav");
-const core = document.querySelector('.core');
+const core = document.querySelector(".core");
 
 let controller = new ScrollMagic.Controller();
 
@@ -21,43 +21,42 @@ window.onload = () => {
 		triggerHook: "onLeave",
 		duration: "100%"
 	})
-	.setTween(tween)
-	.addIndicators({ name: "tween" })
-	.addTo(controller);
+		.setTween(tween)
+		.addIndicators({ name: "tween" })
+		.addTo(controller);
 
-	// $('.beer-carousel').slick({
-	// 	dots: false,
-	// 	arrows: true,
-	// 	infinite: true,
-	// 	speed: 300,
-	// 	slidesToShow: 4,
-	// 	slidesToScroll: 4,
-	// 	responsive: [
-	// 		{
-	// 		breakpoint: 1024,
-	// 		settings: {
-	// 			slidesToShow: 4,
-	// 			slidesToScroll: 4,
-	// 			infinite: true,
-	// 			dots: false
-	// 		}
-	// 		},
-	// 		{
-	// 		breakpoint: 600,
-	// 		settings: {
-	// 			slidesToShow: 2,
-	// 			slidesToScroll: 2
-	// 		}
-	// 		},
-	// 		{
-	// 		breakpoint: 480,
-	// 		settings: {
-	// 			slidesToShow: 1,
-	// 			slidesToScroll: 1
-	// 		}
-	// 		}
-	// 	]
-	// });
+	$(".beer-carousel").slick({
+		arrows: true,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 4,
+		slidesToScroll: 4,
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 4,
+					infinite: true,
+					dots: false
+				}
+			},
+			{
+				breakpoint: 600,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
+	});
 
 	window.onscroll = () => {
 		shrinkNav();
@@ -66,11 +65,14 @@ window.onload = () => {
 
 		triggerBound = trigger.getBoundingClientRect().top;
 
-		if (triggerBound <= 0 && core.getBoundingClientRect().bottom > window.innerHeight) {
+		if (
+			triggerBound <= 0 &&
+			core.getBoundingClientRect().bottom > window.innerHeight
+		) {
 			for (let i = 0; i < beers.length; i++) {
 				const beer = beers[i];
 				beer.style.position = "fixed";
-				beer.style.top = 50 + '%';
+				beer.style.top = 50 + "%";
 			}
 		} else if (triggerBound > 0) {
 			for (let i = 0; i < beers.length; i++) {
@@ -109,8 +111,8 @@ function stopFixedBeer() {
 	if (coreBottom <= window.innerHeight) {
 		for (let i = 0; i < beers.length; i++) {
 			const beer = beers[i];
-			beer.style.position = 'absolute';
-			beer.style.top = 75 + '%';
+			beer.style.position = "absolute";
+			beer.style.top = 75 + "%";
 		}
 	}
 }

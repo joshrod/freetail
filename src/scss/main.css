@@ -719,6 +719,7 @@ ul {
 }
 
 .beer-carousel .seasonal-beer {
+  margin-top: 3rem;
   text-align: center;
 }
 
@@ -735,10 +736,11 @@ ul {
 }
 
 .beer-carousel .seasonal-beer .seasonal-details {
-  margin-top: -16vh;
+  margin-top: -15vh;
 }
 
-.beer-carousel .seasonal-beer .seasonal-details h3, .beer-carousel .seasonal-beer .seasonal-details p {
+.beer-carousel .seasonal-beer .seasonal-details h3,
+.beer-carousel .seasonal-beer .seasonal-details p {
   font-family: "Oswald", sans-serif;
   color: black;
   font-weight: 500;
@@ -746,6 +748,29 @@ ul {
 
 .beer-carousel .seasonal-beer .seasonal-details h3 {
   text-transform: uppercase;
+}
+
+.beer-carousel .seasonal-beer .details-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-color: black;
+  color: black;
+}
+
+.beer-carousel .seasonal-beer .details-button .right-arrow::before {
+  border-style: solid;
+  border-width: 0.15rem 0.15rem 0 0;
+  content: '';
+  display: inline-block;
+  height: 1.1;
+  position: relative;
+  vertical-align: top;
+  width: 1.1;
+  color: black;
+  top: 0.55rem;
+  left: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .main-nav {

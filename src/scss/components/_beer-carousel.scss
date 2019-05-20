@@ -1,33 +1,45 @@
 .beer-carousel {
-    width: 100%;
+	width: 100%;
 
-    .seasonal-beer {
-        text-align: center;
+	.seasonal-beer {
+		margin-top: 3rem;
+		text-align: center;
 
-        .beer-can {
-            height: 75vh;
-            display: inline-block;
-            margin-left: auto;
-            margin-right: auto;
-            
-            img {
-                height: 100%;
-                width: auto;
-            }
-        }
+		.beer-can {
+			height: 75vh;
+			display: inline-block;
+			margin-left: auto;
+			margin-right: auto;
 
-        .seasonal-details {
-            margin-top: -16vh;
+			img {
+				height: 100%;
+				width: auto;
+			}
+		}
 
-            h3, p {
-                font-family: $oswald;
-                color: black;
-                font-weight: 500;
-            }
-    
-            h3 {
-                text-transform: uppercase;
-            }
-        }
-    }
+		.seasonal-details {
+			margin-top: -15vh;
+
+			h3,
+			p {
+				font-family: $oswald;
+				color: black;
+				font-weight: 500;
+			}
+
+			h3 {
+				text-transform: uppercase;
+			}
+		}
+
+		.details-button {
+			margin-top: 1rem;
+			padding: 0.5rem 1rem;
+			border-color: black;
+			color: black;
+			.right-arrow {
+				@include chevron(right, 1.1, black);
+			}
+		}
+	}
 }
