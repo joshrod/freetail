@@ -10,15 +10,26 @@
 			display: inline-block;
 			margin-left: auto;
 			margin-right: auto;
+			@include breakpoint(md) {
+				width: 50%;
+				height: auto;
+			}
 
 			img {
 				height: 100%;
 				width: auto;
+				@include breakpoint(md) {
+					width: 100%;
+					height: auto;
+				}
 			}
 		}
 
 		.seasonal-details {
 			margin-top: -15vh;
+			@include breakpoint(md) {
+				margin-top: -3rem;
+			}
 
 			h3,
 			p {

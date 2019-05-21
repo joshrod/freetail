@@ -730,13 +730,33 @@ ul {
   margin-right: auto;
 }
 
+@media only screen and (min-width: 680px) {
+  .beer-carousel .seasonal-beer .beer-can {
+    width: 50%;
+    height: auto;
+  }
+}
+
 .beer-carousel .seasonal-beer .beer-can img {
   height: 100%;
   width: auto;
 }
 
+@media only screen and (min-width: 680px) {
+  .beer-carousel .seasonal-beer .beer-can img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 .beer-carousel .seasonal-beer .seasonal-details {
   margin-top: -15vh;
+}
+
+@media only screen and (min-width: 680px) {
+  .beer-carousel .seasonal-beer .seasonal-details {
+    margin-top: -3rem;
+  }
 }
 
 .beer-carousel .seasonal-beer .seasonal-details h3,
