@@ -4,4 +4,10 @@
         @include background;
         background-image: url('../../../img/brews-hero.jpg');
     }
+
+    .reserve {
+        @include background;
+        @extend %clearfix;
+        background-image: url('../../../img/reserve-bg.jpg');
+    }
 }

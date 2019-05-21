@@ -44,4 +44,13 @@
     font-weight: 600;
     font-size: 11.5vw;
     text-align: center;
+    @include breakpoint(md) {
+        font-size: 6.5rem;
+    }
+    @include breakpoint(xl) {
+        font-size: 7rem;
+    }
+    @include breakpoint(xxl) {
+        font-size: 5.5vw;
+    }
 }

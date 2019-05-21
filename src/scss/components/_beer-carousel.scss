@@ -1,19 +1,15 @@
 .beer-carousel {
 	width: 100%;
+	margin-top: 3rem;
+	overflow: hidden;
 
-	.seasonal-beer {
-		margin-top: 3rem;
+	.carousel-beer {
 		text-align: center;
 
-		.beer-can {
-			height: 75vh;
+		.beer-can, .reserve-bottle {
 			display: inline-block;
 			margin-left: auto;
 			margin-right: auto;
-			@include breakpoint(md) {
-				width: 50%;
-				height: auto;
-			}
 
 			img {
 				height: 100%;
@@ -25,10 +21,41 @@
 			}
 		}
 
-		.seasonal-details {
-			margin-top: -15vh;
+		.beer-can {
+			height: 65vh;
 			@include breakpoint(md) {
-				margin-top: -3rem;
+				width: 50%;
+				height: auto;
+			}
+			@include breakpoint(xl) {
+				width: 60%;
+			}
+		}
+
+		.reserve-bottle {
+			height: 65vh;
+			display: inline-block;
+			margin-left: auto;
+			margin-right: auto;
+			@include breakpoint(md) {
+				width: 50%;
+				height: auto;
+			}
+			@include breakpoint(xl) {
+				width: 70%;
+			}
+		}
+
+		.carousel-details {
+			margin-top: -10vh;
+			@include breakpoint(md) {
+				margin-top: -6vh;
+			}
+			@include breakpoint(lg) {
+				margin-top: -3vh;
+			}
+			@include breakpoint(xl) {
+				margin-top: -6vh;
 			}
 
 			h3,
@@ -54,3 +81,18 @@
 		}
 	}
 }
+
+#reserve-carousel .carousel-details {
+	margin-top: 0;
+
+	h3, p {
+		color: white;
+	}
+
+	h3 {
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+

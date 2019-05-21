@@ -7,16 +7,16 @@
 /* ARROWS */
 /* CHEVRONS */
 /* CLEARFIX MIXIN */
-footer .footer-container, footer .beer-logos, footer .footer-nav, .home .brew-room, .home .tours-events {
+footer .footer-container, footer .beer-logos, footer .footer-nav, .home .brew-room, .home .tours-events, .brews-body .reserve {
   *zoom: 1;
 }
 
-footer .footer-container:before, footer .beer-logos:before, footer .footer-nav:before, .home .brew-room:before, .home .tours-events:before, footer .footer-container:after, footer .beer-logos:after, footer .footer-nav:after, .home .brew-room:after, .home .tours-events:after {
+footer .footer-container:before, footer .beer-logos:before, footer .footer-nav:before, .home .brew-room:before, .home .tours-events:before, .brews-body .reserve:before, footer .footer-container:after, footer .beer-logos:after, footer .footer-nav:after, .home .brew-room:after, .home .tours-events:after, .brews-body .reserve:after {
   content: " ";
   display: table;
 }
 
-footer .footer-container:after, footer .beer-logos:after, footer .footer-nav:after, .home .brew-room:after, .home .tours-events:after {
+footer .footer-container:after, footer .beer-logos:after, footer .footer-nav:after, .home .brew-room:after, .home .tours-events:after, .brews-body .reserve:after {
   clear: both;
 }
 
@@ -250,6 +250,24 @@ ul {
   font-weight: 600;
   font-size: 11.5vw;
   text-align: center;
+}
+
+@media only screen and (min-width: 680px) {
+  .gray-heading {
+    font-size: 6.5rem;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  .gray-heading {
+    font-size: 7rem;
+  }
+}
+
+@media only screen and (min-width: 1720px) {
+  .gray-heading {
+    font-size: 5.5vw;
+  }
 }
 
 .centered-copy {
@@ -716,68 +734,110 @@ ul {
 
 .beer-carousel {
   width: 100%;
+  margin-top: 3rem;
+  overflow: hidden;
 }
 
-.beer-carousel .seasonal-beer {
-  margin-top: 3rem;
+.beer-carousel .carousel-beer {
   text-align: center;
 }
 
-.beer-carousel .seasonal-beer .beer-can {
-  height: 75vh;
+.beer-carousel .carousel-beer .beer-can, .beer-carousel .carousel-beer .reserve-bottle {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.beer-carousel .carousel-beer .beer-can img, .beer-carousel .carousel-beer .reserve-bottle img {
+  height: 100%;
+  width: auto;
+}
+
+@media only screen and (min-width: 680px) {
+  .beer-carousel .carousel-beer .beer-can img, .beer-carousel .carousel-beer .reserve-bottle img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.beer-carousel .carousel-beer .beer-can {
+  height: 65vh;
+}
+
+@media only screen and (min-width: 680px) {
+  .beer-carousel .carousel-beer .beer-can {
+    width: 50%;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  .beer-carousel .carousel-beer .beer-can {
+    width: 60%;
+  }
+}
+
+.beer-carousel .carousel-beer .reserve-bottle {
+  height: 65vh;
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
 }
 
 @media only screen and (min-width: 680px) {
-  .beer-carousel .seasonal-beer .beer-can {
+  .beer-carousel .carousel-beer .reserve-bottle {
     width: 50%;
     height: auto;
   }
 }
 
-.beer-carousel .seasonal-beer .beer-can img {
-  height: 100%;
-  width: auto;
-}
-
-@media only screen and (min-width: 680px) {
-  .beer-carousel .seasonal-beer .beer-can img {
-    width: 100%;
-    height: auto;
+@media only screen and (min-width: 1240px) {
+  .beer-carousel .carousel-beer .reserve-bottle {
+    width: 70%;
   }
 }
 
-.beer-carousel .seasonal-beer .seasonal-details {
-  margin-top: -15vh;
+.beer-carousel .carousel-beer .carousel-details {
+  margin-top: -10vh;
 }
 
 @media only screen and (min-width: 680px) {
-  .beer-carousel .seasonal-beer .seasonal-details {
-    margin-top: -3rem;
+  .beer-carousel .carousel-beer .carousel-details {
+    margin-top: -6vh;
   }
 }
 
-.beer-carousel .seasonal-beer .seasonal-details h3,
-.beer-carousel .seasonal-beer .seasonal-details p {
+@media only screen and (min-width: 1024px) {
+  .beer-carousel .carousel-beer .carousel-details {
+    margin-top: -3vh;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  .beer-carousel .carousel-beer .carousel-details {
+    margin-top: -6vh;
+  }
+}
+
+.beer-carousel .carousel-beer .carousel-details h3,
+.beer-carousel .carousel-beer .carousel-details p {
   font-family: "Oswald", sans-serif;
   color: black;
   font-weight: 500;
 }
 
-.beer-carousel .seasonal-beer .seasonal-details h3 {
+.beer-carousel .carousel-beer .carousel-details h3 {
   text-transform: uppercase;
 }
 
-.beer-carousel .seasonal-beer .details-button {
+.beer-carousel .carousel-beer .details-button {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   border-color: black;
   color: black;
 }
 
-.beer-carousel .seasonal-beer .details-button .right-arrow::before {
+.beer-carousel .carousel-beer .details-button .right-arrow::before {
   border-style: solid;
   border-width: 0.15rem 0.15rem 0 0;
   content: '';
@@ -791,6 +851,20 @@ ul {
   left: 0;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+#reserve-carousel .carousel-details {
+  margin-top: 0;
+}
+
+#reserve-carousel .carousel-details h3, #reserve-carousel .carousel-details p {
+  color: white;
+}
+
+#reserve-carousel .carousel-details h3 {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main-nav {
@@ -1097,5 +1171,12 @@ footer .footer-nav ul li a {
   background-position: center center;
   background-repeat: no-repeat;
   background-image: url("../../../img/brews-hero.jpg");
+}
+
+.brews-body .reserve {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("../../../img/reserve-bg.jpg");
 }
 /*# sourceMappingURL=main.css.map */
