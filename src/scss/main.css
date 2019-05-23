@@ -140,22 +140,37 @@ ul {
   }
 }
 
-.button-row .grunge-button--gray {
+@media only screen and (min-width: 680px) {
+  .button-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.button-row > div {
   margin-bottom: 2rem;
 }
 
-.button-row .grunge-button--gray:last-of-type {
+.button-row > div:last-of-type {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width: 680px) {
-  .button-row .grunge-button--gray {
+  .button-row > div {
     display: inline-block;
     margin-bottom: 0;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
   }
-  .button-row .grunge-button--gray:nth-of-type(2) {
-    margin-left: 5rem;
-    margin-right: 5rem;
+  .button-row > div:first-of-type {
+    margin-left: 0;
+  }
+  .button-row > div::last-of-type {
+    margin-right: 0;
   }
 }
 
@@ -270,6 +285,68 @@ ul {
   }
 }
 
+.untappd-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 3rem;
+}
+
+.untappd-heading h1 {
+  color: #c8102e;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  display: inline-block;
+  font-size: 12vw;
+}
+
+@media only screen and (min-width: 680px) {
+  .untappd-heading h1 {
+    font-size: 7.2rem;
+  }
+}
+
+@media only screen and (min-width: 1720px) {
+  .untappd-heading h1 {
+    font-size: 10rem;
+  }
+}
+
+.untappd-heading .freetail-tap {
+  display: inline-block;
+  width: 8%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media only screen and (min-width: 680px) {
+  .untappd-heading .freetail-tap {
+    width: 6%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  .untappd-heading .freetail-tap {
+    width: 6rem;
+  }
+}
+
+@media only screen and (min-width: 1720px) {
+  .untappd-heading .freetail-tap {
+    width: 7rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
 .centered-copy {
   text-align: center;
 }
@@ -340,8 +417,6 @@ ul {
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .hero .centered-copy {
@@ -350,6 +425,8 @@ ul {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 @media only screen and (min-width: 680px) {
@@ -363,6 +440,37 @@ ul {
   max-width: 120rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+.hero .address-bar {
+  width: 100%;
+  padding: 1.5rem;
+  position: absolute;
+  bottom: 0;
+  background-color: #53565a;
+  font-weight: 500;
+  text-align: center;
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .hero .address-bar {
+    display: block;
+  }
+}
+
+.hero .address-bar p {
+  display: inline-block;
+  margin-right: 3rem;
+}
+
+.hero .address-bar .uppercase-schedule {
+  text-transform: uppercase;
+}
+
+.hero .address-bar .details-button {
+  padding: 0.5rem 1.5rem;
+  color: white;
 }
 
 .text-outline {
@@ -793,7 +901,7 @@ ul {
 
 @media only screen and (min-width: 1240px) {
   .beer-carousel .carousel-beer .reserve-bottle {
-    width: 70%;
+    width: 100%;
   }
 }
 
@@ -1178,5 +1286,9 @@ footer .footer-nav ul li a {
   background-position: center center;
   background-repeat: no-repeat;
   background-image: url("../../../img/reserve-bg.jpg");
+}
+
+.brewpub-body .hero {
+  background-image: url("../../../img/brewpub-hero.jpg");
 }
 /*# sourceMappingURL=main.css.map */

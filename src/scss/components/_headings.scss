@@ -40,7 +40,7 @@
 
 .gray-heading {
     margin-top: 2.5rem;
-    color: $gray-heading;
+    color: $gray;
     font-weight: 600;
     font-size: 11.5vw;
     text-align: center;
@@ -52,5 +52,46 @@
     }
     @include breakpoint(xxl) {
         font-size: 5.5vw;
+    }
+}
+
+.untappd-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+
+    h1 {
+        color: $red;
+        text-transform: uppercase;
+        font-family: $oswald;
+        display: inline-block;
+        font-size: 12vw;
+        @include breakpoint(md) {
+            font-size: 7.2rem;
+        }
+        @include breakpoint(xxl) {
+            font-size: 10rem;
+        }
+    }
+
+    .freetail-tap {
+        display: inline-block;
+        width: 8%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        @include breakpoint(md) {
+            width: 6%;
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+        @include breakpoint(xl) {
+            width: 6rem;
+        }
+        @include breakpoint(xxl) {
+            width: 7rem;
+            margin-left: 3rem;
+            margin-right: 3rem;
+        }
     }
 }

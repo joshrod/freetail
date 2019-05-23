@@ -30,17 +30,27 @@
     }
 }
 
-.button-row .grunge-button--gray {
-    margin-bottom: 2rem;
-    &:last-of-type {
-        margin-bottom: 0;
-    }
+.button-row {
     @include breakpoint(md) {
-        display: inline-block;
-        margin-bottom: 0;
-        &:nth-of-type(2) {
-            margin-left: 5rem;
-            margin-right: 5rem;
+        display: flex;
+        justify-content: center;
+    }
+    >div {
+        margin-bottom: 2rem;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        @include breakpoint(md) {
+            display: inline-block;
+            margin-bottom: 0;
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+            &:first-of-type {
+                margin-left: 0;
+            }
+            &::last-of-type {
+                margin-right: 0;
+            }
         }
     }
 }
