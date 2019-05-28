@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* COLORS */
 /* FONTS */
 /* CENTER VERTICALLY AND HORIZONTALLY */
@@ -7,16 +8,16 @@
 /* ARROWS */
 /* CHEVRONS */
 /* CLEARFIX MIXIN */
-footer .footer-container, footer .beer-logos, footer .footer-nav, .home .brew-room, .home .tours-events, .brews-body .reserve {
+.untappd-listing .untappd-item, footer .footer-container, footer .beer-logos, footer .footer-nav, .home .brew-room, .home .tours-events, .brews-body .reserve {
   *zoom: 1;
 }
 
-footer .footer-container:before, footer .beer-logos:before, footer .footer-nav:before, .home .brew-room:before, .home .tours-events:before, .brews-body .reserve:before, footer .footer-container:after, footer .beer-logos:after, footer .footer-nav:after, .home .brew-room:after, .home .tours-events:after, .brews-body .reserve:after {
+.untappd-listing .untappd-item:before, footer .footer-container:before, footer .beer-logos:before, footer .footer-nav:before, .home .brew-room:before, .home .tours-events:before, .brews-body .reserve:before, .untappd-listing .untappd-item:after, footer .footer-container:after, footer .beer-logos:after, footer .footer-nav:after, .home .brew-room:after, .home .tours-events:after, .brews-body .reserve:after {
   content: " ";
   display: table;
 }
 
-footer .footer-container:after, footer .beer-logos:after, footer .footer-nav:after, .home .brew-room:after, .home .tours-events:after, .brews-body .reserve:after {
+.untappd-listing .untappd-item:after, footer .footer-container:after, footer .beer-logos:after, footer .footer-nav:after, .home .brew-room:after, .home .tours-events:after, .brews-body .reserve:after {
   clear: both;
 }
 
@@ -198,8 +199,11 @@ ul {
           transform: rotate(45deg);
 }
 
-.hero-heading, .main-heading, .sub-heading, .gray-heading {
-  font-family: 'Oswald', sans-serif;
+.hero-heading,
+.main-heading,
+.sub-heading,
+.gray-heading {
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   color: white;
   font-weight: 500;
@@ -308,13 +312,13 @@ ul {
 
 @media only screen and (min-width: 680px) {
   .untappd-heading h1 {
-    font-size: 7.2rem;
+    font-size: 6rem;
   }
 }
 
 @media only screen and (min-width: 1720px) {
   .untappd-heading h1 {
-    font-size: 10rem;
+    font-size: 9rem;
   }
 }
 
@@ -444,7 +448,7 @@ ul {
 
 .hero .address-bar {
   width: 100%;
-  padding: 1.5rem;
+  padding: 1.25rem;
   position: absolute;
   bottom: 0;
   background-color: #53565a;
@@ -973,6 +977,120 @@ ul {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.untappd-listing {
+  padding: 5rem 2rem;
+}
+
+@media only screen and (min-width: 680px) {
+  .untappd-listing {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
+
+.untappd-listing .untappd-item {
+  margin-bottom: 3rem;
+  display: block;
+}
+
+@media only screen and (min-width: 680px) {
+  .untappd-listing .untappd-item {
+    margin-bottom: 5rem;
+  }
+}
+
+.untappd-listing .untappd-item:last-of-type {
+  margin-bottom: 0;
+}
+
+.untappd-listing .untappd-item .untappd-logo {
+  width: 20%;
+  float: left;
+  padding-right: 0.8rem;
+}
+
+@media only screen and (min-width: 680px) {
+  .untappd-listing .untappd-item .untappd-logo {
+    width: 10%;
+    max-width: 8rem;
+  }
+}
+
+.untappd-listing .untappd-item .untappd-info {
+  width: 80%;
+  float: right;
+  text-align: left;
+}
+
+@media only screen and (min-width: 680px) {
+  .untappd-listing .untappd-item .untappd-info {
+    width: 90%;
+  }
+}
+
+.untappd-listing .untappd-item .untappd-info h3,
+.untappd-listing .untappd-item .untappd-info p,
+.untappd-listing .untappd-item .untappd-info li {
+  color: black;
+  font-family: sans-serif;
+}
+
+.untappd-listing .untappd-item .untappd-info h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.untappd-listing .untappd-item .untappd-info p {
+  font-size: 1.3rem;
+}
+
+.untappd-listing .untappd-item .untappd-info li {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.untappd-listing .untappd-item .untappd-info .italics {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.untappd-listing .untappd-item .untappd-info .untappd-description {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.untappd-listing .untappd-item .untappd-info .untappd-prices {
+  max-width: 50rem;
+  padding: 0;
+  overflow-x: hidden;
+  list-style: none;
+}
+
+@media only screen and (min-width: 680px) {
+  .untappd-listing .untappd-item .untappd-info .untappd-prices {
+    max-width: 80rem;
+  }
+}
+
+.untappd-listing .untappd-item .untappd-info .untappd-prices li::before {
+  float: left;
+  width: 0;
+  white-space: nowrap;
+  content: "· · · · · · · · · · · · · · · · · · · · " "· · · · · · · · · · · · · · · · · · · · " "· · · · · · · · · · · · · · · · · · · · " "· · · · · · · · · · · · · · · · · · · · " "· · · · · · · · · · · · · · · · · · · · " "· · · · · · · · · · · · · · · · · · · · ";
+}
+
+.untappd-listing .untappd-item .untappd-info .untappd-prices span + span {
+  float: right;
+  padding-left: 0.4rem;
+  background-color: white;
+}
+
+.untappd-listing .untappd-item .untappd-info .untappd-prices span:first-child {
+  padding-right: 0.4rem;
+  background-color: white;
 }
 
 .main-nav {

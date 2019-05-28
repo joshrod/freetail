@@ -1,0 +1,107 @@
+.untappd-listing {
+	padding: 5rem 2rem;
+	@include breakpoint(md) {
+		padding-left: 8%;
+		padding-right: 8%;
+	}
+
+	.untappd-item {
+		@extend %clearfix;
+		margin-bottom: 3rem;
+		display: block;
+		@include breakpoint(md) {
+			margin-bottom: 5rem;
+		}
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+		.untappd-logo {
+			width: 20%;
+			float: left;
+			padding-right: 0.8rem;
+			@include breakpoint(md) {
+				width: 10%;
+				max-width: 8rem;
+			}
+		}
+
+		.untappd-info {
+			width: 80%;
+			float: right;
+			text-align: left;
+			@include breakpoint(md) {
+				width: 90%;
+			}
+
+			h3,
+			p,
+			li {
+				color: black;
+				font-family: sans-serif;
+			}
+
+			h3 {
+				font-size: 1.6rem;
+				margin-bottom: 1rem;
+			}
+
+			p {
+				font-size: 1.3rem;
+			}
+
+			li {
+				font-size: 1.3rem;
+				font-weight: bold;
+			}
+
+			.italics {
+				font-style: italic;
+				font-weight: 400;
+				font-size: 1.4rem;
+			}
+
+			.untappd-description {
+				margin-top: 1rem;
+				margin-bottom: 1rem;
+			}
+
+			.untappd-prices {
+				max-width: 50rem;
+				padding: 0;
+				overflow-x: hidden;
+				list-style: none;
+				@include breakpoint(md) {
+					max-width: 80rem;
+				}
+
+				li {
+					&::before {
+						float: left;
+						width: 0;
+						white-space: nowrap;
+						content: "· · · · · · · · · · · · · · · · · · · · "
+							"· · · · · · · · · · · · · · · · · · · · "
+							"· · · · · · · · · · · · · · · · · · · · "
+							"· · · · · · · · · · · · · · · · · · · · "
+							"· · · · · · · · · · · · · · · · · · · · "
+							"· · · · · · · · · · · · · · · · · · · · ";
+					}
+				}
+
+				span {
+					+ span {
+						float: right;
+						padding-left: 0.4rem;
+						background-color: white;
+					}
+
+					&:first-child {
+						padding-right: 0.4rem;
+						background-color: white;
+					}
+				}
+			}
+		}
+	}
+}
