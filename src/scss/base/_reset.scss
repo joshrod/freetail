@@ -23,6 +23,16 @@ body {
 	font-size: 1.6rem;
 }
 
+section {
+	@extend %clearfix;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	@include breakpoint(md) {
+		padding-left: 8%;
+		padding-right: 8%;
+	}
+}
+
 img {
 	width: 100%;
 	height: auto;

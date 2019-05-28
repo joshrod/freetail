@@ -1,9 +1,9 @@
 .home {
 
     .brew-room, .tours-events {
-        @extend %clearfix;
         width: 100%;
         position: relative;
+        padding: 0;
     }
 
     .brewpub, .taproom, .brews, .merch, .tours, .events {
