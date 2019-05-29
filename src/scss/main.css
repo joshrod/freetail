@@ -1625,4 +1625,8 @@ footer .footer-nav ul li a {
 .brewpub-body .hero {
   background-image: url("../../../img/brewpub-hero.jpg");
 }
+
+.taproom-body .hero {
+  background-image: url("../../../img/taproom-hero.jpg");
+}
 /*# sourceMappingURL=main.css.map */
