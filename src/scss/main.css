@@ -211,6 +211,37 @@ ul {
           transform: rotate(45deg);
 }
 
+.event-square {
+  position: relative;
+  width: 100%;
+}
+
+.event-square img {
+  width: 100%;
+}
+
+.event-square .event-date {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.event-square .event-date p {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+}
+
+.event-square .event-date p:first-of-type {
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+.event-square .event-date p:last-of-type {
+  letter-spacing: 1px;
+}
+
 .hero-heading,
 .main-heading,
 .sub-heading,
