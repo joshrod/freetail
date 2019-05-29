@@ -296,7 +296,7 @@ ul {
 
 @media only screen and (min-width: 1720px) {
   .primary-heading {
-    font-size: 5.5vw;
+    font-size: 9rem;
   }
 }
 
@@ -460,6 +460,7 @@ ul {
   width: 100%;
   padding: 1.25rem;
   position: absolute;
+  left: 0;
   bottom: 0;
   background-color: #53565a;
   font-weight: 500;
@@ -1114,8 +1115,16 @@ ul {
 }
 
 .specials {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.2)));
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.2));
+}
+
+@media only screen and (min-width: 680px) {
+  .specials {
+    padding-bottom: 0;
+  }
 }
 
 .specials h3, .specials h4, .specials h5 {
@@ -1124,7 +1133,13 @@ ul {
 
 .specials h3 {
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2.8rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .specials h3 {
+    font-size: 4rem;
+  }
 }
 
 .specials h3 > span {
@@ -1132,9 +1147,21 @@ ul {
   color: black;
 }
 
+@media only screen and (min-width: 1024px) {
+  .specials h3 > span {
+    font-size: 2rem;
+  }
+}
+
 .specials h5 {
   font-size: 1.6rem;
   font-weight: 500;
+}
+
+@media only screen and (min-width: 680px) {
+  .specials h5 {
+    font-size: 2rem;
+  }
 }
 
 .specials .daily-specials {
@@ -1152,9 +1179,20 @@ ul {
   color: black;
 }
 
-.specials .daily-specials .primary-heading {
-  text-align: left;
-  margin-top: 0;
+.specials .daily-specials h5 {
+  margin-top: 1.5rem;
+}
+
+@media only screen and (min-width: 680px) {
+  .specials .daily-specials .primary-heading {
+    text-align: left;
+    margin-top: 0;
+  }
+}
+
+.specials .daily-specials .lunch, .specials .daily-specials .happy-hour, .specials .daily-specials .beer-to-go {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .specials .daily-specials .lunch h3, .specials .daily-specials .beer-to-go h3 {
@@ -1166,10 +1204,18 @@ ul {
 }
 
 .specials .daily-specials .details-button {
+  margin-top: 2rem;
   color: black;
   font-size: 1.2rem;
   padding: 0.4rem 1rem;
   border-width: 1px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .specials .daily-specials .details-button {
+    font-size: 1.4rem;
+    padding: 0.5rem 1.4rem;
+  }
 }
 
 .specials .daily-specials .details-button .right-arrow {
@@ -1205,9 +1251,11 @@ ul {
 
 .specials .daily-specials .military h5 {
   color: white;
+  margin-top: 1rem;
 }
 
 .specials .weekly-specials {
+  margin-top: 5rem;
   text-align: center;
   position: relative;
 }
@@ -1216,7 +1264,14 @@ ul {
   .specials .weekly-specials {
     width: calc(50% - 2rem);
     float: left;
+    margin-top: 0;
   }
+}
+
+.specials .weekly-specials img {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .specials .weekly-specials h4 {
@@ -1227,12 +1282,25 @@ ul {
   font-weight: 500;
 }
 
+@media only screen and (min-width: 1024px) {
+  .specials .weekly-specials h4 {
+    font-size: 2.4rem;
+  }
+}
+
+.specials .weekly-specials h5 > span {
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+}
+
 .specials .weekly-specials p {
   font-size: 1rem;
 }
 
 .specials .weekly-specials .weekly-text {
   width: 80%;
+  max-width: 400px;
   position: absolute;
   top: 60%;
   left: 50%;
