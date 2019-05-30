@@ -77,31 +77,73 @@ window.onload = () => {
 		]
 	});
 
+	$('#events-carousel').slick({
+		dots: false,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		responsive: [
+			{
+				breakpoint: 680,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
+	})
+
 	window.onscroll = () => {
 		shrinkNav();
 
 		stopFixedBeer();
 
-		triggerBound = trigger.getBoundingClientRect().top;
+		if (document.querySelector('#trigger')) {
+			triggerBound = trigger.getBoundingClientRect().top;
 
-		if (
-			triggerBound <= 0 &&
-			core.getBoundingClientRect().bottom > window.innerHeight
-		) {
-			for (let i = 0; i < beers.length; i++) {
-				const beer = beers[i];
-				beer.style.position = "fixed";
-				beer.style.top = 50 + "%";
-			}
-		} else if (triggerBound > 0) {
-			for (let i = 0; i < beers.length; i++) {
-				const beer = beers[i];
-				beer.style.position = "absolute";
-				beer.style.top = 25 + "%";
+			if (
+				triggerBound <= 0 &&
+				core.getBoundingClientRect().bottom > window.innerHeight
+			) {
+				for (let i = 0; i < beers.length; i++) {
+					const beer = beers[i];
+					beer.style.position = "fixed";
+					beer.style.top = 50 + "%";
+				}
+			} else if (triggerBound > 0) {
+				for (let i = 0; i < beers.length; i++) {
+					const beer = beers[i];
+					beer.style.position = "absolute";
+					beer.style.top = 25 + "%";
+				}
 			}
 		}
+		
 	};
 };
+
+//when the slick slide initializes we want to set all of our slides to the same height
+$('#events-carousel').on('setPosition', function () {
+	jbResizeSlider();
+});
+ 
+//we need to maintain a set height when a resize event occurs.
+//Some events will through a resize trigger: $(window).trigger('resize');
+$(window).on('resize', function(e) {
+	jbResizeSlider();
+});
+ 
+//since multiple events can trigger a slider adjustment, we will control that adjustment here
+function jbResizeSlider(){
+	$slickSlider = $('#events-carousel');
+	$slickSlider.find('.slick-slide').height('auto');
+ 
+	var slickTrack = $slickSlider.find('.slick-track');
+	var slickTrackHeight = $(slickTrack).height();
+ 
+	$slickSlider.find('.slick-slide').css('height', slickTrackHeight + 'px');
+}
 
 function centerOutlines() {
 	for (let i = 0; i < outlines.length; i++) {
@@ -125,13 +167,17 @@ function shrinkNav() {
 }
 
 function stopFixedBeer() {
-	coreBottom = core.getBoundingClientRect().bottom;
+	if (document.querySelector('.core')) {
 
-	if (coreBottom <= window.innerHeight) {
-		for (let i = 0; i < beers.length; i++) {
-			const beer = beers[i];
-			beer.style.position = "absolute";
-			beer.style.top = 75 + "%";
+		coreBottom = core.getBoundingClientRect().bottom;
+
+		if (coreBottom <= window.innerHeight) {
+			for (let i = 0; i < beers.length; i++) {
+				const beer = beers[i];
+				beer.style.position = "absolute";
+				beer.style.top = 75 + "%";
+			}
 		}
 	}
+	
 }
