@@ -77,7 +77,7 @@ window.onload = () => {
 		]
 	});
 
-	$('#events-carousel').slick({
+	$("#events-carousel").slick({
 		dots: false,
 		infinite: true,
 		speed: 300,
@@ -92,14 +92,14 @@ window.onload = () => {
 				}
 			}
 		]
-	})
+	});
 
 	window.onscroll = () => {
 		shrinkNav();
 
 		stopFixedBeer();
 
-		if (document.querySelector('#trigger')) {
+		if (document.querySelector("#trigger")) {
 			triggerBound = trigger.getBoundingClientRect().top;
 
 			if (
@@ -119,30 +119,31 @@ window.onload = () => {
 				}
 			}
 		}
-		
 	};
 };
 
 //when the slick slide initializes we want to set all of our slides to the same height
-$('#events-carousel').on('setPosition', function () {
+$("#events-carousel").on("setPosition", function() {
 	jbResizeSlider();
 });
- 
+
 //we need to maintain a set height when a resize event occurs.
 //Some events will through a resize trigger: $(window).trigger('resize');
-$(window).on('resize', function(e) {
+$(window).on("resize", function(e) {
 	jbResizeSlider();
 });
- 
+
 //since multiple events can trigger a slider adjustment, we will control that adjustment here
-function jbResizeSlider(){
-	$slickSlider = $('#events-carousel');
-	$slickSlider.find('.slick-slide').height('auto');
- 
-	var slickTrack = $slickSlider.find('.slick-track');
+function jbResizeSlider() {
+	$slickSlider = $("#events-carousel");
+	$slickSlider
+		.find(".slick-slide")
+		.height($slickSlider.find(".slick-slide").width() * (7 / 8));
+
+	var slickTrack = $slickSlider.find(".slick-track");
 	var slickTrackHeight = $(slickTrack).height();
- 
-	$slickSlider.find('.slick-slide').css('height', slickTrackHeight + 'px');
+
+	$slickSlider.find(".slick-slide").css("height", slickTrackHeight + "px");
 }
 
 function centerOutlines() {
@@ -167,8 +168,7 @@ function shrinkNav() {
 }
 
 function stopFixedBeer() {
-	if (document.querySelector('.core')) {
-
+	if (document.querySelector(".core")) {
 		coreBottom = core.getBoundingClientRect().bottom;
 
 		if (coreBottom <= window.innerHeight) {
@@ -179,5 +179,4 @@ function stopFixedBeer() {
 			}
 		}
 	}
-	
 }

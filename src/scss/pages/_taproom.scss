@@ -2,4 +2,11 @@
 	.hero {
 		background-image: url("../../../img/taproom-hero.jpg");
 	}
+
+	.tap-worker {
+		@include background;
+		width: 100%;
+		height: 60%;
+		background-image: url("../../../img/tap-work.jpg");
+	}
 }
