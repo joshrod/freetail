@@ -1,0 +1,7 @@
+.events-body {
+
+    .hero {
+        @include background;
+        background-image: url('../../../img/events-hero.jpg');
+    }
+}
