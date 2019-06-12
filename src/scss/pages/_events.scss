@@ -1,7 +1,21 @@
 .events-body {
+	.hero {
+		@include background;
+		background-image: url("../../../img/events-hero.jpg");
+	}
 
-    .hero {
-        @include background;
-        background-image: url('../../../img/events-hero.jpg');
-    }
+	.events-images {
+		@extend %clearfix;
+		padding: 4rem 0;
+		@include breakpoint(md) {
+			padding: 8rem 0;
+		}
+
+		.half-width-image {
+			float: left;
+			@include breakpoint(md) {
+				width: 50%;
+			}
+		}
+	}
 }

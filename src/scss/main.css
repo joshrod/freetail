@@ -8,16 +8,16 @@
 /* ARROWS */
 /* CHEVRONS */
 /* CLEARFIX MIXIN */
-section, .events-calendar .calendar-grid, .untappd .untappd-listing .untappd-item, footer .footer-container, footer .beer-logos, footer .footer-nav, .brews-body .reserve {
+section, .events-calendar .calendar-grid, .untappd .untappd-listing .untappd-item, footer .footer-container, footer .beer-logos, footer .footer-nav, .brews-body .reserve, .events-body .events-images {
   *zoom: 1;
 }
 
-section:before, .events-calendar .calendar-grid:before, .untappd .untappd-listing .untappd-item:before, footer .footer-container:before, footer .beer-logos:before, footer .footer-nav:before, .brews-body .reserve:before, section:after, .events-calendar .calendar-grid:after, .untappd .untappd-listing .untappd-item:after, footer .footer-container:after, footer .beer-logos:after, footer .footer-nav:after, .brews-body .reserve:after {
+section:before, .events-calendar .calendar-grid:before, .untappd .untappd-listing .untappd-item:before, footer .footer-container:before, footer .beer-logos:before, footer .footer-nav:before, .brews-body .reserve:before, .events-body .events-images:before, section:after, .events-calendar .calendar-grid:after, .untappd .untappd-listing .untappd-item:after, footer .footer-container:after, footer .beer-logos:after, footer .footer-nav:after, .brews-body .reserve:after, .events-body .events-images:after {
   content: " ";
   display: table;
 }
 
-section:after, .events-calendar .calendar-grid:after, .untappd .untappd-listing .untappd-item:after, footer .footer-container:after, footer .beer-logos:after, footer .footer-nav:after, .brews-body .reserve:after {
+section:after, .events-calendar .calendar-grid:after, .untappd .untappd-listing .untappd-item:after, footer .footer-container:after, footer .beer-logos:after, footer .footer-nav:after, .brews-body .reserve:after, .events-body .events-images:after {
   clear: both;
 }
 
@@ -229,8 +229,16 @@ ul {
   margin-bottom: 2rem;
 }
 
-.events-calendar .calendar-controls .left-arrow, .events-calendar .calendar-controls .current-month, .events-calendar .calendar-controls .right-arrow {
+.events-calendar .calendar-controls a,
+.events-calendar .calendar-controls .current-month {
   display: inline-block;
+}
+
+.events-calendar .calendar-controls a {
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  position: relative;
 }
 
 .events-calendar .calendar-controls .left-arrow::before {
@@ -247,12 +255,6 @@ ul {
   left: 0.25rem;
   -webkit-transform: rotate(-135deg);
           transform: rotate(-135deg);
-}
-
-.events-calendar .calendar-controls .left-arrow::before {
-  top: 0;
-  left: 0;
-  bottom: 1rem;
 }
 
 .events-calendar .calendar-controls .current-month {
@@ -291,9 +293,17 @@ ul {
           transform: rotate(45deg);
 }
 
-.events-calendar .calendar-controls .left-arrow::before, .events-calendar .calendar-controls .right-arrow::before {
+.events-calendar .calendar-controls .left-arrow::before,
+.events-calendar .calendar-controls .right-arrow::before {
   border-width: 0.05rem 0.05rem 0 0;
-  width: 1rem;
+  top: -0.4rem;
+}
+
+@media only screen and (min-width: 680px) {
+  .events-calendar .calendar-controls .left-arrow::before,
+  .events-calendar .calendar-controls .right-arrow::before {
+    top: -0.7rem;
+  }
 }
 
 .events-calendar .calendar-grid {
@@ -1846,5 +1856,25 @@ footer .footer-nav ul li a {
   background-position: center center;
   background-repeat: no-repeat;
   background-image: url("../../../img/events-hero.jpg");
+}
+
+.events-body .events-images {
+  padding: 4rem 0;
+}
+
+@media only screen and (min-width: 680px) {
+  .events-body .events-images {
+    padding: 8rem 0;
+  }
+}
+
+.events-body .events-images .half-width-image {
+  float: left;
+}
+
+@media only screen and (min-width: 680px) {
+  .events-body .events-images .half-width-image {
+    width: 50%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

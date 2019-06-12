@@ -1,75 +1,82 @@
 .events-calendar {
-    width: 100%;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    @include breakpoint(md) {
-        padding-top: 8%;
-        padding-bottom: 8%;
-    }
+	width: 100%;
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+	@include breakpoint(md) {
+		padding-top: 8%;
+		padding-bottom: 8%;
+	}
 
-    .calendar-controls {
-        text-align: center;
-        margin-bottom: 2rem;
+	.calendar-controls {
+		text-align: center;
+		margin-bottom: 2rem;
 
-        .left-arrow, .current-month, .right-arrow {
-            display: inline-block;
-        }
-        
-        .left-arrow {
-            @include chevron(left, 2rem, $gray);
-            &::before {
-                top: 0;
-                left: 0;
-                bottom: 1rem;
-            }
-        }
+		a,
+		.current-month {
+			display: inline-block;
+		}
 
-        .current-month {
-            color: $gray;
-            text-transform: uppercase;
-            font-family: $oswald;
-            font-weight: 600; 
-            font-size: 2.4rem;
-            @include breakpoint(md) {
-                font-size: 3.4rem;
-            }
-            @include breakpoint(xxl) {
-                font-size: 4.2rem;
-            }
-        }
+		a {
+			width: 3rem;
+			height: 3rem;
+			cursor: pointer;
+			position: relative;
+		}
 
-        .right-arrow {
-            @include chevron(right, 2rem, $gray);
-        }
+		.left-arrow {
+			@include chevron(left, 2rem, $gray);
+		}
 
-        .left-arrow, .right-arrow {
-            &::before {
-                border-width: 0.05rem 0.05rem 0 0;
-                width: 1rem;
-            }
-        }
-    }
+		.current-month {
+			color: $gray;
+			text-transform: uppercase;
+			font-family: $oswald;
+			font-weight: 600;
+			font-size: 2.4rem;
+			@include breakpoint(md) {
+				font-size: 3.4rem;
+			}
+			@include breakpoint(xxl) {
+				font-size: 4.2rem;
+			}
+		}
 
-    .calendar-grid {
-        @extend %clearfix;
-        width: 100%;
-        max-width: 100rem;
-        margin-left: auto;
-        margin-right: auto;
+		.right-arrow {
+			@include chevron(right, 2rem, $gray);
+		}
 
-        .event-square {
-            width: 100%;
-            height: calc(82vw - 4rem);
-            float: left;
-            @include breakpoint(md) {
-                width: 50%;
-                height: 35vw;
-            }
-            @include breakpoint(lg) {
-                width: 33.3333333%;
-                height: 25vw;
-                max-height: 30rem;
-            }
-        }
-    }
+		.left-arrow,
+		.right-arrow {
+			&::before {
+				border-width: 0.05rem 0.05rem 0 0;
+				top: -0.4rem;
+				@include breakpoint(md) {
+					top: -0.7rem;
+				}
+			}
+		}
+	}
+
+	.calendar-grid {
+		@extend %clearfix;
+		width: 100%;
+		max-width: 100rem;
+		margin-left: auto;
+		margin-right: auto;
+
+		.event-square {
+			width: 100%;
+			height: calc(82vw - 4rem);
+			float: left;
+			@include breakpoint(md) {
+				width: 50%;
+				height: 35vw;
+			}
+			@include breakpoint(lg) {
+				width: 33.3333333%;
+				height: 25vw;
+				max-height: 30rem;
+			}
+		}
+	}
 }
