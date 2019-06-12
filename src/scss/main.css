@@ -8,16 +8,16 @@
 /* ARROWS */
 /* CHEVRONS */
 /* CLEARFIX MIXIN */
-section, .events-calendar .calendar-grid, .untappd .untappd-listing .untappd-item, footer .footer-container, footer .beer-logos, footer .footer-nav, .brews-body .reserve, .events-body .events-images {
+section, .events-calendar .calendar-grid, .picture-form form, .untappd .untappd-listing .untappd-item, footer .footer-container, footer .beer-logos, footer .footer-nav, .brews-body .reserve, .events-body .events-images {
   *zoom: 1;
 }
 
-section:before, .events-calendar .calendar-grid:before, .untappd .untappd-listing .untappd-item:before, footer .footer-container:before, footer .beer-logos:before, footer .footer-nav:before, .brews-body .reserve:before, .events-body .events-images:before, section:after, .events-calendar .calendar-grid:after, .untappd .untappd-listing .untappd-item:after, footer .footer-container:after, footer .beer-logos:after, footer .footer-nav:after, .brews-body .reserve:after, .events-body .events-images:after {
+section:before, .events-calendar .calendar-grid:before, .picture-form form:before, .untappd .untappd-listing .untappd-item:before, footer .footer-container:before, footer .beer-logos:before, footer .footer-nav:before, .brews-body .reserve:before, .events-body .events-images:before, section:after, .events-calendar .calendar-grid:after, .picture-form form:after, .untappd .untappd-listing .untappd-item:after, footer .footer-container:after, footer .beer-logos:after, footer .footer-nav:after, .brews-body .reserve:after, .events-body .events-images:after {
   content: " ";
   display: table;
 }
 
-section:after, .events-calendar .calendar-grid:after, .untappd .untappd-listing .untappd-item:after, footer .footer-container:after, footer .beer-logos:after, footer .footer-nav:after, .brews-body .reserve:after, .events-body .events-images:after {
+section:after, .events-calendar .calendar-grid:after, .picture-form form:after, .untappd .untappd-listing .untappd-item:after, footer .footer-container:after, footer .beer-logos:after, footer .footer-nav:after, .brews-body .reserve:after, .events-body .events-images:after {
   clear: both;
 }
 
@@ -426,7 +426,8 @@ ul {
 .hero-heading,
 .main-heading,
 .sub-heading,
-.primary-heading {
+.primary-heading,
+.secondary-heading {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   color: white;
@@ -518,6 +519,26 @@ ul {
 
 .primary-heading.black {
   color: black;
+}
+
+.secondary-heading {
+  margin-top: 1.5rem;
+  color: #c8102e;
+  text-align: center;
+  font-weight: 600;
+  font-size: 5vw;
+}
+
+@media only screen and (min-width: 680px) {
+  .secondary-heading {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1720px) {
+  .secondary-heading {
+    font-size: 2.6rem;
+  }
 }
 
 .untappd-heading {
@@ -1202,6 +1223,57 @@ ul {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.picture-form {
+  width: 100%;
+  margin-top: 4rem;
+}
+
+@media only screen and (min-width: 680px) {
+  .picture-form img {
+    width: 50%;
+    float: left;
+  }
+}
+
+.picture-form form {
+  width: 50%;
+  float: right;
+}
+
+.picture-form form p {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: black;
+  font-size: 1.6rem;
+}
+
+@media only screen and (min-width: 680px) {
+  .picture-form form p {
+    margin-top: 0;
+  }
+}
+
+.picture-form form label {
+  font-family: "Oswald", sans-serif;
+  color: #a7a8aa;
+}
+
+.picture-form form input, .picture-form form select {
+  width: 100%;
+  height: 3.5rem;
+  border-color: #a7a8aa;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0;
+  background-color: white;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.4rem;
+}
+
+.picture-form form .inline-inputs {
+  width: 50%;
 }
 
 .untappd {
