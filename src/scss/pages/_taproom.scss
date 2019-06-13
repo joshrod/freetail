@@ -9,4 +9,13 @@
 		height: 60%;
 		background-image: url("../../../img/tap-work.jpg");
 	}
+
+	.taproom-events {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		@include breakpoint(xl) {
+			padding-top: 6rem;
+			padding-bottom: 6rem;
+		}
+	}
 }

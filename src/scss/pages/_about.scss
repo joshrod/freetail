@@ -3,4 +3,21 @@
 		@include background;
 		background-image: url("../../../img/about-hero.jpg");
 	}
+
+	.brewery-tours, .taproom-rental {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		@include breakpoint(md) {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+		@include breakpoint(xl) {
+			padding-top: 6rem;
+			padding-bottom: 6rem;
+		}
+		@include breakpoint(xxl) {
+			padding-top: 7rem;
+			padding-bottom: 7rem;
+		}
+	}
 }

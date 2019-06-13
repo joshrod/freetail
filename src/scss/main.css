@@ -468,12 +468,6 @@ ul {
   }
 }
 
-@media only screen and (min-width: 1720px) {
-  .hero-heading {
-    font-size: 11rem;
-  }
-}
-
 .main-heading {
   font-size: 4.2rem;
 }
@@ -507,7 +501,6 @@ ul {
 }
 
 .primary-heading {
-  margin-top: 2.5rem;
   font-weight: 600;
   font-size: 11.5vw;
   text-align: center;
@@ -808,7 +801,7 @@ ul {
 
 @media only screen and (min-width: 1720px) {
   .core .beers {
-    max-width: 38rem;
+    max-width: 35rem;
   }
 }
 
@@ -1679,6 +1672,26 @@ ul {
   display: none;
 }
 
+@media only screen and (min-width: 680px) {
+  .main-nav .social-media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 14rem;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    left: 3rem;
+  }
+}
+
+.main-nav .social-media .sm-container {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .main-nav .mobile-logo {
   width: 20%;
   position: relative;
@@ -1715,6 +1728,11 @@ ul {
   .main-nav .logo-plate {
     display: block;
   }
+}
+
+.main-nav .logo-plate a {
+  width: 100%;
+  height: 100%;
 }
 
 .main-nav .logo-plate img {
@@ -1966,6 +1984,25 @@ footer .footer-nav ul li a {
   background-image: url("../../../img/brews-hero.jpg");
 }
 
+.brews-body .seasonal, .brews-body .reserve {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media only screen and (min-width: 680px) {
+  .brews-body .seasonal, .brews-body .reserve {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  .brews-body .seasonal, .brews-body .reserve {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
 .brews-body .reserve {
   background-size: cover;
   background-position: center center;
@@ -1988,6 +2025,18 @@ footer .footer-nav ul li a {
   width: 100%;
   height: 60%;
   background-image: url("../../../img/tap-work.jpg");
+}
+
+.taproom-body .taproom-events {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media only screen and (min-width: 1240px) {
+  .taproom-body .taproom-events {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
 }
 
 .events-body .hero {
@@ -2021,10 +2070,62 @@ footer .footer-nav ul li a {
   background-image: url("../../../img/about-hero.jpg");
 }
 
+.tours-body .brewery-tours, .tours-body .taproom-rental {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media only screen and (min-width: 680px) {
+  .tours-body .brewery-tours, .tours-body .taproom-rental {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  .tours-body .brewery-tours, .tours-body .taproom-rental {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+@media only screen and (min-width: 1720px) {
+  .tours-body .brewery-tours, .tours-body .taproom-rental {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
 .about-body .hero {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-image: url("../../../img/about-hero.jpg");
+}
+
+.about-body .brewery-tours, .about-body .taproom-rental {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media only screen and (min-width: 680px) {
+  .about-body .brewery-tours, .about-body .taproom-rental {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  .about-body .brewery-tours, .about-body .taproom-rental {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+@media only screen and (min-width: 1720px) {
+  .about-body .brewery-tours, .about-body .taproom-rental {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

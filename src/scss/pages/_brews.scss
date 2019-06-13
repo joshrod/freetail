@@ -5,6 +5,19 @@
         background-image: url('../../../img/brews-hero.jpg');
     }
 
+    .seasonal, .reserve {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        @include breakpoint(md) {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        @include breakpoint(xl) {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+    }
+
     .reserve {
         @include background;
         @extend %clearfix;
