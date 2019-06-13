@@ -32,7 +32,7 @@
 		<meta name="msapplication-TileColor" content="#b91d47" />
 		<meta name="theme-color" content="#ffffff" />
 	</head>
-	<body class="events-body">
+	<body class="tours-body">
 		<nav class="main-nav">
 			<div class="social-media">
 				<div class="sm-container">
@@ -87,7 +87,7 @@
 			<h3 class="secondary-heading">Every Saturday at 3PM & 5PM</h3>
 			<div class="picture-form">
 				<img src="/img/brewery.jpg" alt="Tap Room Brewery Tour">
-				<form action="action.php">
+				<form action="#">
 					<p>We invite you to come by our Production Brewery, enjoy a fresh beer, and get a tour. Fill out the form below to book a tour.</p>
 					<label for="name">Name</label>
 					<input type="text"></input>
@@ -98,16 +98,20 @@
 					<label for="date">Desired Date</label>
 					<input type="text"></input>
 					<div class="inline-inputs">
-						<label for="people">Number of People</label>
-						<input type="text"></input>
+						<div class="people-number">
+							<label for="people">Number of People</label>
+							<input type="text"></input>
+						</div>
+						<div class="select-options">
+							<label for="public">Public or Private</label>
+							<select name="public" id="public">
+								<option value="public">Public</option>
+								<option value="private">Private</option>
+							</select>
+						</div>
 					</div>
-					<div class="inline-inputs">
-						<label for="public">Public or Private</label>
-						<select name="public" id="public">
-							<option value="public">Public</option>
-							<option value="private">Private</option>
-						</select>
-					</div>
+					<input class="submit" type="submit" value="BOOK A TOUR">
+					</input>
 				</form>
 			</div>
 		</section>
@@ -116,8 +120,8 @@
 			<h3 class="secondary-heading">Available for Private Events on Nights We Are Closed</h3>
 			<div class="picture-form">
 				<img src="/img/benches.jpg" alt="Tap Room Benches at Brewery">
-				<form action="action.php">
-					<p>We invite you to come by our Production Brewery, enjoy a fresh beer, and get a tour. Fill out the form below to book a tour.</p>
+				<form action="#">
+					<p>Looking for a cool place to impress a cool group of people? Look no further! Fill out the form below to book today.</p>
 					<label for="name">Name</label>
 					<input type="text"></input>
 					<label for="phone">Phone Number</label>
@@ -128,15 +132,15 @@
 					<input type="date"></input>
 					<div class="inline-inputs">
 						<label for="people">Number of People</label>
-						<input type="number"></input>
-					</div>
-					<div class="inline-inputs">
+						<input type="number"></input> 
 						<label for="public">Public or Private</label>
 						<select name="public" id="public">
 							<option value="public">Public</option>
 							<option value="private">Private</option>
 						</select>
 					</div>
+					<input class="submit" type="submit" value="BOOK TODAY">
+					</input>
 				</form>
 			</div>
 		</section>

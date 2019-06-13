@@ -8,16 +8,16 @@
 /* ARROWS */
 /* CHEVRONS */
 /* CLEARFIX MIXIN */
-section, .events-calendar .calendar-grid, .picture-form form, .untappd .untappd-listing .untappd-item, footer .footer-container, footer .beer-logos, footer .footer-nav, .brews-body .reserve, .events-body .events-images {
+section, .events-calendar .calendar-grid, .picture-form, .picture-form form, .picture-form form .inline-inputs, .untappd .untappd-listing .untappd-item, footer .footer-container, footer .beer-logos, footer .footer-nav, .brews-body .reserve, .events-body .events-images {
   *zoom: 1;
 }
 
-section:before, .events-calendar .calendar-grid:before, .picture-form form:before, .untappd .untappd-listing .untappd-item:before, footer .footer-container:before, footer .beer-logos:before, footer .footer-nav:before, .brews-body .reserve:before, .events-body .events-images:before, section:after, .events-calendar .calendar-grid:after, .picture-form form:after, .untappd .untappd-listing .untappd-item:after, footer .footer-container:after, footer .beer-logos:after, footer .footer-nav:after, .brews-body .reserve:after, .events-body .events-images:after {
+section:before, .events-calendar .calendar-grid:before, .picture-form:before, .picture-form form:before, .picture-form form .inline-inputs:before, .untappd .untappd-listing .untappd-item:before, footer .footer-container:before, footer .beer-logos:before, footer .footer-nav:before, .brews-body .reserve:before, .events-body .events-images:before, section:after, .events-calendar .calendar-grid:after, .picture-form:after, .picture-form form:after, .picture-form form .inline-inputs:after, .untappd .untappd-listing .untappd-item:after, footer .footer-container:after, footer .beer-logos:after, footer .footer-nav:after, .brews-body .reserve:after, .events-body .events-images:after {
   content: " ";
   display: table;
 }
 
-section:after, .events-calendar .calendar-grid:after, .picture-form form:after, .untappd .untappd-listing .untappd-item:after, footer .footer-container:after, footer .beer-logos:after, footer .footer-nav:after, .brews-body .reserve:after, .events-body .events-images:after {
+section:after, .events-calendar .calendar-grid:after, .picture-form:after, .picture-form form:after, .picture-form form .inline-inputs:after, .untappd .untappd-listing .untappd-item:after, footer .footer-container:after, footer .beer-logos:after, footer .footer-nav:after, .brews-body .reserve:after, .events-body .events-images:after {
   clear: both;
 }
 
@@ -108,7 +108,10 @@ ul {
   padding: 0;
 }
 
-.grunge-button--black, .grunge-button--red, .grunge-button--gray, .grunge-button--lightgray {
+.grunge-button--black,
+.grunge-button--red,
+.grunge-button--gray,
+.grunge-button--lightgray {
   display: block;
   width: 12rem;
   margin-left: auto;
@@ -116,18 +119,27 @@ ul {
 }
 
 @media only screen and (min-width: 680px) {
-  .grunge-button--black, .grunge-button--red, .grunge-button--gray, .grunge-button--lightgray {
+  .grunge-button--black,
+  .grunge-button--red,
+  .grunge-button--gray,
+  .grunge-button--lightgray {
     width: 14rem;
   }
 }
 
 @media only screen and (min-width: 1240px) {
-  .grunge-button--black, .grunge-button--red, .grunge-button--gray, .grunge-button--lightgray {
+  .grunge-button--black,
+  .grunge-button--red,
+  .grunge-button--gray,
+  .grunge-button--lightgray {
     width: 17rem;
   }
 }
 
-.grunge-button--black a, .grunge-button--red a, .grunge-button--gray a, .grunge-button--lightgray a {
+.grunge-button--black a,
+.grunge-button--red a,
+.grunge-button--gray a,
+.grunge-button--lightgray a {
   width: 100%;
   height: 3rem;
   display: block;
@@ -138,7 +150,10 @@ ul {
 }
 
 @media only screen and (min-width: 680px) {
-  .grunge-button--black a, .grunge-button--red a, .grunge-button--gray a, .grunge-button--lightgray a {
+  .grunge-button--black a,
+  .grunge-button--red a,
+  .grunge-button--gray a,
+  .grunge-button--lightgray a {
     height: 3.5rem;
     font-size: 1.8rem;
     line-height: 3.4rem;
@@ -146,7 +161,10 @@ ul {
 }
 
 @media only screen and (min-width: 1240px) {
-  .grunge-button--black a, .grunge-button--red a, .grunge-button--gray a, .grunge-button--lightgray a {
+  .grunge-button--black a,
+  .grunge-button--red a,
+  .grunge-button--gray a,
+  .grunge-button--lightgray a {
     height: 4rem;
     font-size: 2.2rem;
     line-height: 3.9rem;
@@ -1227,19 +1245,22 @@ ul {
 
 .picture-form {
   width: 100%;
-  margin-top: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 @media only screen and (min-width: 680px) {
   .picture-form img {
-    width: 50%;
+    width: 46%;
     float: left;
   }
 }
 
-.picture-form form {
-  width: 50%;
-  float: right;
+@media only screen and (min-width: 680px) {
+  .picture-form form {
+    width: 46%;
+    float: right;
+  }
 }
 
 .picture-form form p {
@@ -1256,13 +1277,21 @@ ul {
 }
 
 .picture-form form label {
+  margin-bottom: 0.6rem;
+  display: block;
   font-family: "Oswald", sans-serif;
   color: #a7a8aa;
 }
 
-.picture-form form input, .picture-form form select {
+.picture-form form input[type="text"],
+.picture-form form input[type="tel"],
+.picture-form form input[type="email"],
+.picture-form form input[type="date"],
+.picture-form form input[type="number"],
+.picture-form form select {
   width: 100%;
   height: 3.5rem;
+  margin-bottom: 1rem;
   border-color: #a7a8aa;
   border-style: solid;
   border-width: 1px;
@@ -1272,8 +1301,46 @@ ul {
   font-size: 1.4rem;
 }
 
-.picture-form form .inline-inputs {
-  width: 50%;
+.picture-form form .inline-inputs .people-number {
+  float: left;
+  width: calc(50% - 1rem);
+}
+
+.picture-form form .inline-inputs .select-options {
+  float: right;
+  width: calc(50% - 1rem);
+}
+
+.picture-form form .submit {
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 12rem;
+  height: 3rem;
+  display: block;
+  color: white;
+  border: 1px solid white;
+  line-height: 3rem;
+  cursor: pointer;
+  background-color: #c8102e;
+}
+
+@media only screen and (min-width: 680px) {
+  .picture-form form .submit {
+    width: 14rem;
+    height: 3.5rem;
+    font-size: 1.8rem;
+    line-height: 3.4rem;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  .picture-form form .submit {
+    width: 17rem;
+    height: 4rem;
+    font-size: 2.2rem;
+    line-height: 3.9rem;
+  }
 }
 
 .untappd {
@@ -1948,5 +2015,16 @@ footer .footer-nav ul li a {
   .events-body .events-images .half-width-image {
     width: 50%;
   }
+}
+
+.tours-body .hero {
+  background-image: url("../../../img/about-hero.jpg");
+}
+
+.about-body .hero {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("../../../img/about-hero.jpg");
 }
 /*# sourceMappingURL=main.css.map */

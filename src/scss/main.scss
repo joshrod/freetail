@@ -4,16 +4,16 @@
 @import "base/reset";
 
 @import "components/buttons";
-@import 'components/events-calendar';
-@import 'components/events-carousel';
-@import 'components/event-square';
+@import "components/events-calendar";
+@import "components/events-carousel";
+@import "components/event-square";
 @import "components/headings";
 @import "components/centered-copy";
 @import "components/hero";
 @import "components/text-outlines";
 @import "components/core";
 @import "components/beer-carousel";
-@import 'components/picture-form';
+@import "components/picture-form";
 @import "components/untappd";
 @import "components/specials";
 
@@ -24,4 +24,6 @@
 @import "pages/brews";
 @import "pages/brewpub";
 @import "pages/taproom";
-@import 'pages/events';
+@import "pages/events";
+@import "pages/tours";
+@import "pages/about";

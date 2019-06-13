@@ -1,0 +1,6 @@
+.about-body {
+	.hero {
+		@include background;
+		background-image: url("../../../img/about-hero.jpg");
+	}
+}
