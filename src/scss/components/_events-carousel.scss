@@ -1,20 +1,29 @@
 #events-carousel {
-    width: 100%;
-    max-width: 100rem;
-    margin-top: 3rem;
-    overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
-    @include breakpoint(md) {
-        margin-top: 6rem;
-    }
+	width: 100%;
+	max-width: 100rem;
+	margin-top: 3rem;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	@include breakpoint(md) {
+		margin-top: 6rem;
+	}
 
-    .slick-prev {
-        left: 0;
-        z-index: 2;
+	.slick-prev,
+	.slick-next {
+		&::before {
+			color: black;
+		}
+	}
+
+	.slick-prev {
+		left: 0;
+		z-index: 2;
 	}
 
 	.slick-next {
 		right: 0;
-    }
+	}
 }
