@@ -367,6 +367,15 @@ ul {
   }
 }
 
+#events-carousel .slick-prev {
+  left: 0;
+  z-index: 2;
+}
+
+#events-carousel .slick-next {
+  right: 0;
+}
+
 .event-square {
   background-size: cover;
   background-position: center center;
@@ -1107,6 +1116,14 @@ ul {
   overflow: hidden;
 }
 
+.beer-carousel .slick-prev {
+  left: 0;
+}
+
+.beer-carousel .slick-next {
+  right: 0;
+}
+
 .beer-carousel .carousel-beer {
   text-align: center;
 }
@@ -1220,6 +1237,14 @@ ul {
   left: 0;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+#seasonal-carousel .slick-prev::before {
+  color: black;
+}
+
+#seasonal-carousel .slick-next::before {
+  color: black;
 }
 
 #reserve-carousel .carousel-details {
